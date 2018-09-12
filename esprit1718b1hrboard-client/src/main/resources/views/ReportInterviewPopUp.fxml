@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="436.0" style="-fx-background-color: a1aec4;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.REportInterviewPopUpController">
+   <children>
+      <Label layoutX="140.0" layoutY="31.0" text="Reporting Interview" textFill="#324f6b">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="200.0" text="Report to :" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXTextArea fx:id="reasonReportTextArea" layoutX="109.0" layoutY="97.0" prefHeight="70.0" prefWidth="271.0" />
+      <JFXDatePicker fx:id="dateReport" defaultColor="#324f6b" layoutX="118.0" layoutY="198.0" />
+      <Label layoutX="24.0" layoutY="97.0" text="Reason :" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="reportbttn" layoutX="192.0" layoutY="266.0" style="-fx-background-color: #324f6b;" text="Report" textFill="#a1aec4" />
+   </children>
+</AnchorPane>

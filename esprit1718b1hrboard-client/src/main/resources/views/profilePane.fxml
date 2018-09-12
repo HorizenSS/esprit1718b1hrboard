@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="AllInfosPane" prefHeight="533.0" prefWidth="949.0" stylesheets="@custom.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.ProfilePaneController">
+   <children>
+      <StackPane fx:id="generaleInfosStackPane" layoutX="6.0" layoutY="32.0" maxHeight="414.0" maxWidth="240.0" minHeight="414.0" minWidth="240.0" prefHeight="414.0" prefWidth="240.0">
+         <children>
+            <AnchorPane fx:id="generalInfosPane" maxHeight="414.0" maxWidth="240.0" minHeight="414.0" minWidth="240.0" prefHeight="414.0" prefWidth="240.0" style="-fx-background-color: white; -fx-background-radius: 3; -fx-border-color: #3C8DBC; -fx-border-radius: 0 0 3 3; -fx-border-width: 4 0 0 0; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-padding: 4;">
+               <children>
+                  <Label fx:id="lblFirstLastName" layoutX="13.0" layoutY="108.0" prefHeight="29.0" prefWidth="216.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #6a7d9a;" text="First&amp;last Name" />
+                  <VBox layoutX="14.0" layoutY="132.0" minHeight="203.0" minWidth="207.0" prefHeight="235.0" prefWidth="207.0">
+                     <children>
+                        <Label fx:id="lblAddress" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Adress">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="MAP_MARKER" size="17.0" wrappingWidth="20.666631162166595" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblPost" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Post">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="TIE" size="17.0" wrappingWidth="22.000005185604095" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblGrade" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Grade">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="LAN" size="17.0" wrappingWidth="20.666692197322845" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblDepartement" layoutX="10.0" layoutY="38.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Departement">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="HOME" size="17.0" wrappingWidth="22.000005185604095" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblEmail" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Email">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="EMAIL" size="17.0" wrappingWidth="20.666692197322845" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblPhone" layoutX="10.0" layoutY="73.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Pone Number">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="PHONE" size="17.0" wrappingWidth="20.666692197322845" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblGender" layoutX="10.0" layoutY="90.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Gender">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="HUMAN" size="17.0" wrappingWidth="20.666692197322845" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblBirthDate" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Birth_Date">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="CALENDAR" size="17.0" wrappingWidth="20.666692197322845" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblNationality" layoutX="10.0" layoutY="150.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Nationality">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="HUMAN" size="17.0" text="" wrappingWidth="20.666692197322845" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="profilPicDetail" fitHeight="85.0" fitWidth="94.0" layoutX="70.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/avatar.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="editGeneralInfoBtn" layoutX="169.0" layoutY="373.0" mnemonicParsing="false" onAction="#OnActioneditGeneralInfos" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: #F87951;">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="BORDER_COLOR" size="24" wrappingWidth="22.000005185604095" />
+                     </graphic>
+                     <padding>
+                        <Insets top="6.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="editGeneralInfoBtn1" layoutX="39.0" layoutY="373.0" mnemonicParsing="false" onAction="#OnActioneditGeneralInfos" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: #F87951;">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="CAMERA" size="24" wrappingWidth="22.000005185604095" />
+                     </graphic>
+                     <padding>
+                        <Insets top="6.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <StackPane fx:id="stackPaneDetails" layoutX="495.0" layoutY="37.0" minWidth="220.0" prefHeight="468.0" prefWidth="220.0">
+         <children>
+            <AnchorPane minWidth="220.0" prefHeight="468.0" prefWidth="190.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: white; -fx-border-color: #3C8DBC; -fx-border-radius: 0 0 3 3; -fx-padding: 4; -fx-border-width: 4 0 0 0;">
+               <children>
+                  <ScrollPane layoutX="1.0" layoutY="13.0" prefHeight="392.0" prefWidth="220.0">
+                     <content>
+                        <VBox fx:id="skillsVbox" onMouseEntered="#showSkillDetails" onMouseExited="#closeDetails" prefHeight="188.0" prefWidth="220.0" spacing="10.0" stylesheets="@custom.css" />
+                     </content>
+                  </ScrollPane>
+                  <MaterialDesignIconView fill="WHITE" glyphName="PLUS" layoutX="147.0" layoutY="437.0" size="24" wrappingWidth="19.000005185604095" />
+                  <Button fx:id="addSkillBtn" layoutX="159.0" layoutY="421.0" mnemonicParsing="false" onAction="#OnActionAddSkillBtn" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: #F87951;">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="PLUS" size="24" wrappingWidth="19.000005185604095" />
+                     </graphic>
+                     <padding>
+                        <Insets top="6.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <Pane layoutX="6.0" layoutY="1.0" prefHeight="31.0" prefWidth="240.0" style="-fx-background-color: #00B3A0; -fx-background-radius: 5 5 0 0;">
+         <children>
+            <Label layoutX="36.0" layoutY="2.0" prefHeight="30.0" prefWidth="192.0" text="General Informations" textFill="#fffefe">
+               <font>
+                  <Font name="Roboto Medium" size="18.0" />
+               </font>
+            </Label>
+            <MaterialDesignIconView fill="#f1f4f8" glyphName="INFORMATION" layoutX="11.0" layoutY="24.0" size="17.0" wrappingWidth="22.000005185604095" />
+         </children>
+      </Pane>
+      <StackPane fx:id="emergencyStack" layoutX="6.0" layoutY="469.0">
+         <children>
+            <AnchorPane minHeight="50.0" prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: white; -fx-background-radius: 3; -fx-border-color: #FF0000; -fx-border-radius: 0 0 3 3; -fx-border-width: 4 0 0 0; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-padding: 4;">
+               <children>
+                  <VBox layoutX="12.0" layoutY="10.0" prefHeight="40.0" prefWidth="179.0">
+                     <children>
+                        <Label fx:id="lblPhoneEmergency" layoutX="10.0" layoutY="73.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Pone Number">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="PHONE" size="17.0" wrappingWidth="20.666692197322845" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblAddressEmergency" prefHeight="20.0" prefWidth="184.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Adress">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="MAP_MARKER" size="17.0" wrappingWidth="20.666631162166595" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Button fx:id="updateEmergencyBtn" layoutX="200.0" layoutY="10.0" minHeight="20.0" mnemonicParsing="false" onAction="#OnActionupdateEmergencyBtn" prefHeight="20.0" prefWidth="15.0" style="-fx-background-color: #F87951;">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="BORDER_COLOR" size="24" text="" wrappingWidth="23.000005185604095" />
+                     </graphic>
+                     <padding>
+                        <Insets top="6.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <Pane layoutX="6.0" layoutY="453.0" prefHeight="20.0" prefWidth="240.0" style="-fx-background-color: #FF0000; -fx-background-radius: 5 5 0 0;">
+         <children>
+            <Label layoutX="36.0" layoutY="-4.0" prefHeight="30.0" prefWidth="192.0" text="       Emergency Contacts" textFill="#fffefe">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <MaterialDesignIconView fill="#f1f4f8" glyphName="AMBULANCE" layoutX="17.0" layoutY="18.0" size="17.0" text="" wrappingWidth="22.000005185604095" />
+         </children>
+      </Pane>
+      <StackPane fx:id="detailsStack" layoutX="256.0" layoutY="39.0">
+         <children>
+            <AnchorPane prefHeight="263.0" prefWidth="229.0" style="-fx-background-color: white; -fx-background-radius: 3; -fx-border-color: #3C8DBC; -fx-border-radius: 0 0 3 3; -fx-border-width: 4 0 0 0; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-padding: 4;">
+               <children>
+                  <VBox layoutX="14.0" layoutY="16.0" prefHeight="85.0" prefWidth="207.0">
+                     <children>
+                        <Label fx:id="lblCodeWork" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Code">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="BARCODE" size="17.0" wrappingWidth="20.666631162166595" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblCin" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="CIN">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="CREDIT_CARD" size="17.0" wrappingWidth="22.000005185604095" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblPassport" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Passport">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="EARTH" size="17.0" wrappingWidth="20.666692197322845" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblSocialStatus" layoutX="10.0" layoutY="38.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Social Status">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="HUMAN_MALE_FEMALE" size="17.0" wrappingWidth="22.000005185604095" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblChildsNb" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Childs Nb">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="HUMAN_CHILD" size="17.0" wrappingWidth="20.666692197322845" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblBank" layoutX="10.0" layoutY="73.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Bank">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="BANK" size="17.0" wrappingWidth="20.666692197322845" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblRib" layoutX="10.0" layoutY="110.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="RIB">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="CURRENCY_USD" size="17.0" wrappingWidth="20.666692197322845" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblWorkedHrs" layoutX="10.0" layoutY="90.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Worked_Hrs">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="CLOCK" size="17.0" wrappingWidth="20.666692197322845" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblVacationDays" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Vacation_Days">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="CALENDAR" size="17.0" wrappingWidth="20.666692197322845" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Button fx:id="updatePersoInfoBtn" layoutX="175.0" layoutY="211.0" mnemonicParsing="false" onAction="#OnActionupdatePersoInfo" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #F87951;">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="BORDER_COLOR" size="24" wrappingWidth="19.000005185604095" />
+                     </graphic>
+                     <padding>
+                        <Insets top="6.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <Pane layoutX="256.0" layoutY="8.0" prefHeight="31.0" prefWidth="229.0" style="-fx-background-color: #00B3A0; -fx-background-radius: 5 5 0 0;">
+         <children>
+            <Label layoutX="36.0" layoutY="2.0" prefHeight="30.0" prefWidth="192.0" text="            Details" textFill="#fffefe">
+               <font>
+                  <Font name="Roboto Medium" size="18.0" />
+               </font>
+            </Label>
+            <MaterialDesignIconView fill="#f1f4f8" glyphName="INFORMATION" layoutX="16.0" layoutY="24.0" size="17.0" wrappingWidth="22.000005185604095" />
+         </children>
+      </Pane>
+      <StackPane fx:id="contractStack" layoutX="253.0" layoutY="348.0">
+         <children>
+            <AnchorPane prefHeight="170.0" prefWidth="229.0" style="-fx-background-color: white; -fx-background-radius: 3; -fx-border-color: FFA07A; -fx-border-radius: 0 0 3 3; -fx-border-width: 4 0 0 0; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-padding: 4;">
+               <children>
+                  <VBox layoutX="14.0" layoutY="21.0" prefHeight="85.0" prefWidth="207.0">
+                     <children>
+                        <Label fx:id="lblTypeContract" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Type">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="FILE" size="17.0" wrappingWidth="20.666692197322845" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblSartDate" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Start Date">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="CALENDAR" size="17.0" wrappingWidth="20.666631162166595" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblEndDate" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="End Date">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="CALENDAR" size="17.0" wrappingWidth="22.000005185604095" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblRequiredHrs" layoutX="10.0" layoutY="38.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Required Nb Hrs">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="CLOCK" size="17.0" wrappingWidth="22.000005185604095" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblPricePerHrs" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="price per Hr">
+                           <graphic>
+                              <MaterialDesignIconView fill="#7387a8" glyphName="CURRENCY_USD" size="17.0" wrappingWidth="20.666692197322845" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Button fx:id="updateContractBtn" layoutX="181.0" layoutY="129.0" mnemonicParsing="false" onAction="#OnActionupdateContact" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: #F87951;">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="BORDER_COLOR" size="24" wrappingWidth="19.000005185604095" />
+                     </graphic>
+                     <padding>
+                        <Insets top="6.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <Pane layoutX="253.0" layoutY="317.0" prefHeight="31.0" prefWidth="229.0" style="-fx-background-color: #CD5C5C; -fx-background-radius: 5 5 0 0;">
+         <children>
+            <Label layoutX="36.0" layoutY="2.0" prefHeight="30.0" prefWidth="192.0" text="            Contract" textFill="#fffefe">
+               <font>
+                  <Font name="Roboto Medium" size="18.0" />
+               </font>
+            </Label>
+            <MaterialDesignIconView fill="#f1f4f8" glyphName="INFORMATION" layoutX="16.0" layoutY="24.0" size="17.0" wrappingWidth="22.000005185604095" />
+         </children>
+      </Pane>
+      <Pane layoutX="495.0" layoutY="6.0" prefHeight="31.0" prefWidth="220.0" style="-fx-background-color: #00B3A0; -fx-background-radius: 5 5 0 0;">
+         <children>
+            <Label layoutX="36.0" layoutY="3.0" prefHeight="30.0" prefWidth="119.0" text="       Skills" textFill="#fffefe">
+               <font>
+                  <Font name="Roboto Medium" size="18.0" />
+               </font>
+            </Label>
+            <MaterialDesignIconView fill="#f1f4f8" glyphName="ROCKET" layoutX="16.0" layoutY="24.0" size="17.0" wrappingWidth="22.000005185604095" />
+         </children>
+      </Pane>
+      <AnchorPane layoutX="724.0" layoutY="6.0" minWidth="220.0" prefHeight="217.0" prefWidth="210.0" style="-fx-background-color: white; -fx-background-radius: 3; -fx-border-radius: 3; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+         <children>
+            <Separator layoutX="1.0" layoutY="92.0" prefHeight="4.0" prefWidth="216.0" />
+            <Separator layoutX="4.0" layoutY="122.0" prefHeight="4.0" prefWidth="207.0" />
+            <Separator layoutX="4.0" layoutY="152.0" prefHeight="4.0" prefWidth="207.0" />
+            <Label layoutX="23.0" layoutY="96.0" prefHeight="20.0" prefWidth="109.0" text="Planified Projects" textFill="#6a7d9a">
+               <font>
+                  <Font name="Roboto Light" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="126.0" prefHeight="20.0" prefWidth="124.0" text="Completed Projects" textFill="#6a7d9a">
+               <font>
+                  <Font name="Roboto Light" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="155.0" prefHeight="20.0" prefWidth="124.0" text="Tasks In" textFill="#6a7d9a">
+               <font>
+                  <Font name="Roboto Light" size="14.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="62.0" prefWidth="220.0" style="-fx-background-color: #F39C12;">
+               <children>
+                  <Label layoutX="80.0" layoutY="16.0" prefHeight="30.0" prefWidth="82.0" text="Projects" textFill="#fffefe">
+                     <font>
+                        <Font name="Roboto Medium" size="18.0" />
+                     </font>
+                  </Label>
+                  <MaterialDesignIconView fill="#f1f4f8" glyphName="WORKER" layoutX="32.0" layoutY="37.0" size="17.0" wrappingWidth="22.000005185604095" />
+               </children>
+            </Pane>
+            <Label fx:id="prjNb" layoutX="21.0" layoutY="66.0" prefHeight="17.0" prefWidth="94.0" text="Projects In" textFill="#6a7d9a">
+               <font>
+                  <Font name="Roboto Light" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="projectsIn" layoutX="178.0" layoutY="64.0" prefHeight="20.0" prefWidth="29.0" style="-fx-alignment: center; -fx-background-color: #3C8DBC; -fx-background-radius: 6; -fx-text-fill: white; -fx-font-size: 12; -fx-font-weight: bold;" text="31">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label fx:id="tasksIn" layoutX="171.0" layoutY="157.0" prefHeight="17.0" prefWidth="40.0" style="-fx-alignment: center; -fx-background-color: #DD4B39; -fx-background-radius: 6; -fx-text-fill: white; -fx-font-size: 12; -fx-font-weight: bold;" text="866">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label fx:id="projectAfter" layoutX="182.0" layoutY="98.0" prefHeight="17.0" prefWidth="22.0" style="-fx-alignment: center; -fx-background-color: #00C0EF; -fx-background-radius: 6; -fx-text-fill: white; -fx-font-size: 12; -fx-font-weight: bold;" text="5">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label fx:id="ProjectBefore" layoutX="183.0" layoutY="128.0" prefHeight="17.0" prefWidth="22.0" style="-fx-alignment: center; -fx-background-color: #00A65A; -fx-background-radius: 6; -fx-text-fill: white; -fx-font-size: 12; -fx-font-weight: bold;" text="12">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <MaterialDesignIconView fill="WHITE" glyphName="PLUS" layoutX="195.0" layoutY="207.0" size="24" text="" wrappingWidth="19.000005185604095" />
+            <MaterialDesignIconView fill="WHITE" glyphName="INFORMATION" layoutX="185.0" layoutY="206.0" size="24" wrappingWidth="12.000005185604095" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="722.0" layoutY="263.0" minWidth="220.0" prefHeight="127.0" prefWidth="220.0" style="-fx-background-color: white; -fx-background-radius: 3; -fx-border-radius: 3; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+         <children>
+            <Label layoutX="21.0" layoutY="75.0" prefHeight="20.0" prefWidth="136.0" text="Year Appreciation" textFill="#6a7d9a">
+               <font>
+                  <Font name="Roboto Light" size="14.0" />
+               </font>
+            </Label>
+            <Pane layoutY="-1.0" prefHeight="31.0" prefWidth="220.0" style="-fx-background-color: #2b7c72;">
+               <children>
+                  <Label layoutX="82.0" layoutY="-2.0" prefHeight="30.0" prefWidth="109.0" text="Appreciation" textFill="#fffefe">
+                     <font>
+                        <Font name="Roboto Medium" size="18.0" />
+                     </font>
+                  </Label>
+                  <MaterialDesignIconView fill="#f1f4f8" glyphName="THUMB_UP_OUTLINE" layoutX="37.0" layoutY="21.0" size="17.0" wrappingWidth="22.000005185604095" />
+               </children>
+            </Pane>
+            <Label layoutX="16.0" layoutY="39.0" prefHeight="20.0" prefWidth="162.0" text="Monthly Appreciation" textFill="#6a7d9a">
+               <font>
+                  <Font name="Roboto Light" size="14.0" />
+               </font>
+            </Label>
+            <MaterialDesignIconView fill="WHITE" glyphName="PLUS" layoutX="194.0" layoutY="130.0" size="24" text="" wrappingWidth="19.000005185604095" />
+            <ProgressBar fx:id="progressMonth" layoutX="14.0" layoutY="62.0" minHeight="-Infinity" prefHeight="4.0" prefWidth="200.0" progress="0.44" styleClass="mprogress-bar" />
+            <ProgressBar fx:id="progressYear" layoutX="14.0" layoutY="99.0" minHeight="-Infinity" prefHeight="4.0" prefWidth="200.0" progress="0.81" styleClass="mprogress-bar" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="ConfirmDeleteEmpBtn" layoutX="748.0" layoutY="448.0" onAction="#OnActionDeleteEmp" prefHeight="56.0" prefWidth="179.0" style="-fx-background-color: #e02d2d;" text="    DELETE THIS PROFILE" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIconView fill="#fffefe" glyphName="TRASH" layoutX="834.0" layoutY="496.0" />
+   </children>
+</AnchorPane>

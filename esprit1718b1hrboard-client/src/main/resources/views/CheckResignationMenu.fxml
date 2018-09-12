@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="WraperPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.CheckResignationMenuController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="378.0" prefWidth="583.0">
+         <children>
+            <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="378.0" prefWidth="583.0">
+               <children>
+                  <Label fx:id="lblFirstLastName" contentDisplay="CENTER" layoutX="9.0" layoutY="139.0" prefHeight="29.0" prefWidth="193.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="First&amp;last Name" />
+                  <Label fx:id="lblPost" layoutX="10.0" layoutY="170.0" prefHeight="29.0" prefWidth="167.0" style="-fx-font-size: 14; -fx-text-fill: #00000;" text="Post">
+                     <graphic>
+                        <MaterialDesignIconView fill="#7387a8" glyphName="TIE" size="17.0" wrappingWidth="22.000005185604095" />
+                     </graphic>
+                  </Label>
+                  <ImageView fx:id="EmployeePic" fitHeight="136.0" fitWidth="149.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/avatar.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="registredIn" contentDisplay="CENTER" layoutX="157.0" layoutY="3.0" prefHeight="29.0" prefWidth="376.0" style="-fx-font-size: 14; -fx-text-fill: red;" text="Start Date" />
+                  <JFXTextArea fx:id="RespondingMessage" layoutX="189.0" layoutY="230.0" prefHeight="58.0" prefWidth="376.0" />
+                  <Label layoutX="189.0" layoutY="200.0" prefHeight="29.0" prefWidth="283.0" style="-fx-font-size: 14; -fx-text-fill: #00000;" text="Set the responding message here* :" />
+                  <Label layoutX="9.0" layoutY="333.0" prefHeight="29.0" prefWidth="242.0" style="-fx-font-size: 14; -fx-text-fill: #00000;" text="Click to confirm or deny the demand :" />
+                  <JFXButton fx:id="SetButton" layoutX="500.0" layoutY="328.0" onMouseClicked="#SetButtonClicked" prefHeight="40.0" prefWidth="75.0" style="-fx-background-color: #6a7d9a;" text="Set" textFill="#f2f2f2" />
+                  <JFXToggleButton fx:id="Confirm" layoutX="260.0" layoutY="319.0" onMousePressed="#ConfirmClicked" prefHeight="40.0" prefWidth="154.0" />
+                  <ListView fx:id="ProjectsList" layoutX="10.0" layoutY="234.0" prefHeight="76.0" prefWidth="146.0" />
+                  <Label fx:id="lblVacDays1" layoutX="10.0" layoutY="200.0" prefHeight="29.0" prefWidth="167.0" style="-fx-font-size: 14; -fx-text-fill: #00000;" text="Projects :" />
+                  <JFXTextArea fx:id="SubmissionMessage" editable="false" focusColor="#4d4d4d" layoutX="189.0" layoutY="137.0" prefHeight="58.0" prefWidth="376.0" style="-fx-text-fill: #6a7d9a #6a7d9a;" />
+                  <Label layoutX="189.0" layoutY="107.0" prefHeight="29.0" prefWidth="283.0" style="-fx-font-size: 14; -fx-text-fill: #00000; -fx-font-weight: bold; -fx-font-style: italic;" text="Submission message :" />
+                  <Label fx:id="lblresDate" layoutX="181.0" layoutY="43.0" prefHeight="29.0" prefWidth="376.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Start Date">
+                     <graphic>
+                        <MaterialDesignIconView fill="#7387a8" glyphName="CALENDAR" size="17.0" wrappingWidth="20.666631162166595" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="lblEndContract" layoutX="181.0" layoutY="73.0" prefHeight="29.0" prefWidth="376.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Start Date">
+                     <graphic>
+                        <MaterialDesignIconView fill="#7387a8" glyphName="CALENDAR" size="17.0" wrappingWidth="20.666631162166595" />
+                     </graphic>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

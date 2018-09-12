@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+
+
+<StackPane fx:id="stackpaneaddaccount" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.AddAccoutAdminFxmlController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="945.0">
+         <children>
+            <ImageView fitHeight="526.0" fitWidth="958.0" layoutY="59.0" opacity="0.64" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/conference-32376_960_720.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="listviewpane" layoutX="-4.0" layoutY="98.0" prefHeight="377.0" prefWidth="958.0">
+               <children>
+                  <ListView fx:id="EmployeeWithoutAccount" layoutX="63.0" layoutY="48.0" opacity="0.85" prefHeight="382.0" prefWidth="833.0" style="-fx-border-color: white; -fx-background-color: gray;" />
+                  <CustomTextField fx:id="searchemployee" layoutX="590.0" layoutY="9.0" onKeyReleased="#cherchinstantane" prefHeight="25.0" prefWidth="228.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

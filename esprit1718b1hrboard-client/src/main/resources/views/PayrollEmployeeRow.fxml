@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="row" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="116.0" prefWidth="753.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Separator layoutX="200.0" layoutY="7.0" orientation="VERTICAL" prefHeight="100.0" />
+      <Pane layoutY="-5.0" prefHeight="125.0" prefWidth="202.0">
+         <children>
+            <ImageView fx:id="owner_img" fitHeight="87.0" fitWidth="82.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/icons8_User_48px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="name" layoutX="91.0" layoutY="24.0" style="-fx-text-fill: black;" text="nom prenom" />
+            <Label fx:id="phone_lbl" layoutX="93.0" layoutY="48.0" style="-fx-text-fill: black;" text="phone">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Phone_48px_4.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="205.0" layoutY="2.0" prefHeight="120.0" prefWidth="500.0">
+         <children>
+            <Label fx:id="dateDembauche" layoutX="15.0" layoutY="10.0" style="-fx-text-fill: black;" text="date d'embauche ">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Calendar_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="employeePost" layoutX="8.0" layoutY="54.0" prefHeight="39.0" prefWidth="131.0" style="-fx-text-fill: black;" text="poste">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/target.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="email" layoutX="293.0" layoutY="18.0" style="-fx-text-fill: black;" text="E-Mail" />
+            <Label fx:id="WorkedHours" layoutX="165.0" layoutY="62.0" style="-fx-text-fill: black;" text="Worked Hours">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/startTime.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="hourPrice" layoutX="300.0" layoutY="61.0" style="-fx-text-fill: black;" text="Hour price">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/dollar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="263.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_Gmail_48px.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="439.0" layoutY="38.0" prefHeight="39.0" prefWidth="99.0" style="-fx-background-color: #3678c9;" text="Calculate Salary" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

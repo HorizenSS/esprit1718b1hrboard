@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="DepartmentInfoPane" prefHeight="274.0" prefWidth="441.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.DepartmentInfoPaneController">
+   <children>
+      <Label layoutX="30.0" layoutY="10.0" text="The Super Department :" />
+      <Label fx:id="LablPlace" layoutX="120.0" layoutY="80.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Place">
+         <graphic>
+            <MaterialDesignIconView fill="#7387a8" glyphName="MAP_MARKER" size="17.0" wrappingWidth="20.666631162166595" />
+         </graphic>
+      </Label>
+      <Label fx:id="lablSupDep" layoutX="120.0" layoutY="176.0" prefHeight="29.0" prefWidth="139.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Super Department">
+         <graphic>
+            <MaterialDesignIconView fill="#7387a8" glyphName="LAN" size="17.0" wrappingWidth="20.666692197322845" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblDepartementName" layoutX="120.0" layoutY="40.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Departement's Name">
+         <graphic>
+            <MaterialDesignIconView fill="#7387a8" glyphName="HOME" size="17.0" wrappingWidth="22.000005185604095" />
+         </graphic>
+      </Label>
+      <JFXTextArea fx:id="DescriptionDep" editable="false" layoutX="120.0" layoutY="121.0" prefHeight="37.0" prefWidth="207.0" promptText="Description" unFocusColor="#aeaeae" />
+   </children>
+</Pane>

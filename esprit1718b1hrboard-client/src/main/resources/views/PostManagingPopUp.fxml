@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="WraperPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.PostManagingPopUpController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="PostPopUpPane" prefHeight="337.0" prefWidth="475.0">
+         <children>
+            <JFXTextArea fx:id="Description" layoutX="99.0" layoutY="122.0" prefHeight="60.0" prefWidth="335.0" promptText="Put a description for this Post here." style="-fx-font-size: 14; -fx-text-fill: #009973;" />
+            <Label fx:id="lblFirstLastName" layoutX="168.0" layoutY="2.0" prefHeight="29.0" prefWidth="149.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #009973;" text="Post Management" />
+            <TextField fx:id="CodeTxtField" layoutX="91.0" layoutY="42.0" promptText="Code" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" />
+            <MaterialDesignIconView fill="#009973" glyphName="BARCODE" layoutX="62.0" layoutY="61.0" size="17.0" wrappingWidth="20.666631162166595" />
+            <MaterialDesignIconView fill="#009973" glyphName="TIE" layoutX="61.0" layoutY="104.0" size="17.0" text="" wrappingWidth="22.000005185604095" />
+            <MaterialDesignIconView fill="#009973" glyphName="HOME" layoutX="61.0" layoutY="220.0" size="17.0" wrappingWidth="22.000005185604095" />
+            <TextField fx:id="EntitledTxtField" layoutX="91.0" layoutY="82.0" promptText="Entitled" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" />
+            <JFXComboBox fx:id="DepartmentComboBox" layoutX="91.0" layoutY="201.0" prefHeight="25.0" prefWidth="175.0" promptText="Department" />
+            <Label layoutX="292.0" layoutY="205.0" prefHeight="17.0" prefWidth="36.0" text="Old :" />
+            <Label fx:id="OldDepartment" layoutX="324.0" layoutY="203.0" prefHeight="20.0" prefWidth="126.0" style="-fx-text-fill: #009973; -fx-font-weight: bold; -fx-font-size: 14;" text="Label" />
+            <Button fx:id="DeletePostButton" layoutX="279.0" layoutY="240.0" mnemonicParsing="false" onMouseClicked="#DeleteClicked" prefHeight="60.0" prefWidth="65.0" style="-fx-background-color: #009973;">
+               <padding>
+                  <Insets top="6.0" />
+               </padding>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/Delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="UpdatePostButton" layoutX="366.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#UpdateClicked" prefHeight="60.0" prefWidth="65.0" style="-fx-background-color: #009973;">
+               <padding>
+                  <Insets top="6.0" />
+               </padding>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/Edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="deletelbl" layoutX="293.0" layoutY="308.0" text="Delete" textFill="#009973" />
+            <Label layoutX="379.0" layoutY="308.0" text="Update" textFill="#009973" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

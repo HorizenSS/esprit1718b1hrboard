@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="PostsWraperPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.PostsMenuController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="PostsMainPane" prefHeight="547.0" prefWidth="945.0" style="-fx-background-color: #e6e6e6;" stylesheets="@custom2.css">
+         <children>
+            <JFXButton fx:id="AddButton" layoutX="751.0" layoutY="359.0" onMouseClicked="#OnAddPostsClicked" prefHeight="45.0" prefWidth="135.0" style="-fx-background-color: #5580aa;" text="+ Add" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="LIstPostsLabel" layoutX="255.0" layoutY="12.0" prefHeight="47.0" prefWidth="465.0" style="-fx-font-size: 32; -fx-font-weight: bold; -fx-text-fill: #6a7d9a;" text="List of Posts by departments " />
+            <TableView fx:id="PostsTable" layoutX="64.0" layoutY="147.0" prefHeight="357.0" prefWidth="609.0" style="-fx-text-fill: #0088cc; -fx-effe: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+               <columns>
+                  <TableColumn fx:id="idEmployee" prefWidth="90.0" style="-fx-text-fill: #000000;" text="Post's Code" />
+                  <TableColumn fx:id="nameEmployee" text="Entitled" />
+                  <TableColumn fx:id="descriptionpost" prefWidth="240.0" text="Description" />
+                  <TableColumn fx:id="postEmployee" prefWidth="200.0" text="Department" />
+               </columns>
+            </TableView>
+            <JFXButton fx:id="ManageButton" layoutX="752.0" layoutY="309.0" onMouseClicked="#OnManagePostsClicked" prefHeight="45.0" prefWidth="135.0" style="-fx-background-color: #2aa22a;" text="Manage" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <AnchorPane layoutX="60.0" layoutY="63.0" prefHeight="80.0" prefWidth="609.0" style="-fx-background-color: rgb(0, 115, 183,0.6); -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 5;">
+               <children>
+                  <ImageView fitHeight="70.0" fitWidth="77.0" layoutX="1.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/search1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="83.0" layoutY="5.0" prefHeight="28.0" prefWidth="115.0" text="Filter by :" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Black" size="19.0" />
+                     </font>
+                  </Label>
+                  <JFXRadioButton fx:id="nameSearchRadio" layoutX="149.0" layoutY="7.0" prefHeight="28.0" prefWidth="77.0" selected="true" styleClass="custom-jfx-check-box" text="Entitled" textFill="#fffdfd">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="filter" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="postSerchRadio" layoutX="224.0" layoutY="7.0" prefHeight="28.0" prefWidth="77.0" styleClass="custom-jfx-check-box" text="Code" textFill="#fffdfd" toggleGroup="$filter">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="departementSearchRadio" layoutX="292.0" layoutY="7.0" prefHeight="28.0" prefWidth="77.0" styleClass="custom-jfx-check-box" text="Departement" textFill="#fffdfd" toggleGroup="$filter">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXTextField fx:id="critiriaSearch" focusColor="#fcfcfc" labelFloat="true" layoutX="433.0" layoutY="28.0" maxWidth="214.0" minWidth="115.0" onKeyReleased="#searchEmployees" prefHeight="29.0" prefWidth="145.0" promptText="Search by Critiria" unFocusColor="WHITE">
+                     <font>
+                        <Font name="Roboto Black" size="13.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="718.0" layoutY="143.0" prefHeight="119.0" prefWidth="200.0" style="-fx-background-color: #ffffcc; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 7;">
+               <children>
+                  <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/errorWarnig2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextArea editable="false" focusColor="#ffffcc" layoutX="20.0" layoutY="38.0" prefHeight="70.0" prefWidth="164.0" text="to manage a post you should select it then click on the Manage button below." unFocusColor="#ffffcc" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

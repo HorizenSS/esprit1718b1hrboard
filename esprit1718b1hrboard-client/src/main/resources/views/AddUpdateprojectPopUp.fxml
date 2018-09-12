@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="skillsProjectPane" maxWidth="310.0" minWidth="310.0" prefHeight="300.0" prefWidth="310.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.AddUpdateprojectPopUpController">
+   <children>
+      <JFXButton fx:id="confirmProjectBtn" layoutX="94.0" layoutY="258.0" onAction="#OnActionConfirmProject" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #F39C12;" text="          CONFIRM" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="33.0" layoutY="65.0" prefHeight="18.0" prefWidth="80.0" style="-fx-text-fill: G;" text="Start Date :" textFill="#547540">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="116.0" prefHeight="18.0" prefWidth="80.0" style="-fx-text-fill: G;" text="End Date :" textFill="#bf1837">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/project-icon2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="41.0" layoutY="206.0" prefHeight="18.0" prefWidth="100.0" style="-fx-text-fill: G;" text="Client Feedback" textFill="#6487cc">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="12.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/OK.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="40.0" layoutY="162.0" prefHeight="18.0" prefWidth="57.0" style="-fx-text-fill: G;" text="Value :" textFill="#ee5757">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="24.0" fitWidth="25.0" layoutX="15.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/money-icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="47.0" layoutY="15.0" prefHeight="18.0" prefWidth="59.0" style="-fx-text-fill: G;" text="Project :" textFill="#9a4141">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="12.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8_Calendar_48px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="7.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8_Calendar_48px.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="projectName" layoutX="120.0" layoutY="8.0" prefHeight="25.0" prefWidth="156.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="value" layoutX="129.0" layoutY="153.0" prefHeight="25.0" prefWidth="80.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXSlider fx:id="feedback" layoutX="155.0" layoutY="205.0" max="10.0" prefHeight="30.0" prefWidth="140.0" value="0.1" />
+      <JFXDatePicker fx:id="startDate" layoutX="113.0" layoutY="61.0" prefHeight="25.0" prefWidth="156.0" />
+      <JFXDatePicker fx:id="endDate" layoutX="113.0" layoutY="113.0" prefHeight="25.0" prefWidth="156.0" />
+      <ImageView fx:id="errorName" fitHeight="30.0" fitWidth="25.0" layoutX="280.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../icons/errorWarnig2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="errorStartdate" fitHeight="30.0" fitWidth="25.0" layoutX="281.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../icons/errorWarnig2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="errorEnddate" fitHeight="30.0" fitWidth="25.0" layoutX="280.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../icons/errorWarnig2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="errorVlaue" fitHeight="30.0" fitWidth="25.0" layoutX="279.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../icons/errorWarnig2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

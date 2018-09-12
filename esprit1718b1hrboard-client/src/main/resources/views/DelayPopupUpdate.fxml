@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rowAbs" minWidth="340.0" prefHeight="90.0" prefWidth="340.0" style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #c3c3c3; -fx-background-color: #eaddba;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.DelayPopupUpdateController">
+   <children>
+      <Label layoutX="32.0" layoutY="6.0" prefHeight="30.0" prefWidth="60.0" style="-fx-text-fill: #73879C; -fx-font-weight: bold; -fx-font-size: 15;" text="Date :" />
+      <Label layoutX="29.0" layoutY="53.0" prefHeight="30.0" prefWidth="83.0" style="-fx-text-fill: #73879C; -fx-font-weight: bold; -fx-font-size: 15;" text="Hours :" />
+      <FontAwesomeIconView fill="#682d2d" glyphName="CALENDAR" layoutX="11.0" layoutY="26.0" />
+      <FontAwesomeIconView fill="#682d2d" glyphName="EDIT" layoutX="12.0" layoutY="72.0" />
+      <JFXDatePicker fx:id="updateDate" layoutX="107.0" layoutY="3.0" maxHeight="25.0" minWidth="10.0" prefHeight="25.0" prefWidth="139.0" />
+      <JFXButton fx:id="ConfirmUpdateBtn" layoutX="275.0" layoutY="22.0" onAction="#OnActionConfirmUpdate" prefHeight="30.0" prefWidth="60.0" rotate="37.9" style="-fx-background-color: #F39C12;" text="     OK" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="errorDate" fitHeight="30.0" fitWidth="25.0" layoutX="243.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../icons/errorWarnig2.png" />
+         </image>
+      </ImageView>
+      <Spinner fx:id="hrsSpinner" layoutX="136.0" layoutY="54.0" prefHeight="25.0" prefWidth="54.0" />
+   </children>
+</AnchorPane>

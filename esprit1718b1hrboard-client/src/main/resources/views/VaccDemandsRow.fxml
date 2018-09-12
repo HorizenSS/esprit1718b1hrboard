@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="WraperPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="MainRow" style="-fx-background-color: #e7f7fe;">
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="730.0">
+               <children>
+                  <HBox prefHeight="75.0" prefWidth="730.0">
+                     <children>
+                        <Pane prefHeight="75.0" prefWidth="290.0">
+                           <children>
+                              <ImageView fx:id="EmployeePic" fitHeight="59.0" fitWidth="67.0" layoutX="5.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/avatar.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lblFirstLastName" layoutX="72.0" layoutY="6.0" prefHeight="22.0" prefWidth="131.0" style="-fx-font-size: 12; -fx-font-weight: bold; -fx-text-fill: #6a7d9a;" text="First&amp;last Name" />
+                              <Label fx:id="employeePostLbl" layoutX="70.0" layoutY="30.0" prefHeight="29.0" prefWidth="123.0" style="-fx-font-size: 12; -fx-text-fill: #6a7d9a;" text="Post">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#7387a8" glyphName="TIE" size="17.0" wrappingWidth="22.000005185604095" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Separator orientation="VERTICAL" prefHeight="72.0" prefWidth="6.0" />
+                        <Pane prefHeight="75.0" prefWidth="293.0">
+                           <children>
+                              <Label fx:id="DemandSubmissionDateLbl" layoutX="4.0" layoutY="45.0" prefHeight="22.0" prefWidth="186.0" style="-fx-font-size: 12; -fx-text-fill: #6a7d9a;" text="Vacation_Days">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#7387a8" glyphName="CALENDAR" size="17.0" wrappingWidth="20.666692197322845" />
+                                 </graphic>
+                              </Label>
+                              <Label fx:id="VaccTypeLbl" layoutX="6.0" layoutY="6.0" prefHeight="29.0" prefWidth="186.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Type">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#6a7d9a" glyphName="FILE" size="17.0" wrappingWidth="20.666692197322845" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Separator orientation="VERTICAL" prefHeight="72.0" prefWidth="6.0" />
+                        <Pane prefHeight="75.0" prefWidth="304.0">
+                           <children>
+                              <Label fx:id="VaccSdateLbl" layoutX="10.0" layoutY="5.0" prefHeight="29.0" prefWidth="171.0" style="-fx-font-size: 12; -fx-text-fill: #6a7d9a;" text="Start Date">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#7387a8" glyphName="CALENDAR" size="17.0" wrappingWidth="20.666631162166595" />
+                                 </graphic>
+                              </Label>
+                              <Label fx:id="VaccEDateLbl" layoutX="10.0" layoutY="40.0" prefHeight="29.0" prefWidth="186.0" style="-fx-font-size: 12; -fx-text-fill: #6a7d9a;" text="End Date">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#7387a8" glyphName="CALENDAR" size="17.0" wrappingWidth="22.000005185604095" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Separator orientation="VERTICAL" prefHeight="72.0" prefWidth="6.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

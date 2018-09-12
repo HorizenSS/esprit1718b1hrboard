@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rowCodidatJobOffer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="119.0" prefWidth="656.0" style="-fx-background-color: #324f6b;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="imageCodidatJobOffer" fitHeight="75.0" fitWidth="96.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/avatar.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="nameCodidatJobOffer" alignment="CENTER" layoutX="14.0" layoutY="91.0" text="Nom Prenom" textFill="#a1aec4" />
+      <Label fx:id="mailCodidatJobOffer" layoutX="116.0" layoutY="25.0" text="Nom.Prenom@esprit.tn" textFill="#a1aec4" />
+      <Label fx:id="adreseeCodidatJobOffer" layoutX="118.0" layoutY="53.0" text="Adresse" textFill="#a1aec4" />
+      <Label fx:id="phonenumberCodidatJobOffer" layoutX="118.0" layoutY="82.0" text="Phone Number" textFill="#a1aec4" />
+      <Label fx:id="diplomeCodidatJobOffer" layoutX="257.0" layoutY="41.0" text="Ingenieur/Thechnicien" textFill="#a1aec4" />
+      <Label fx:id="experienceCodidatJobOffer" layoutX="258.0" layoutY="70.0" text="Experience année" textFill="#a1aec4" />
+      <Label layoutX="397.0" layoutY="16.0" text="Top Skills" textFill="#a1aec4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="skiil1CodidatJobOffer" layoutX="414.0" layoutY="43.0" text="JavaEE" textFill="#a1aec4" />
+      <Label fx:id="skill2CodidatJobOffer" layoutX="414.0" layoutY="67.0" text="MySQL" textFill="#a1aec4" />
+      <Label fx:id="skill3CodidatJobOffer" layoutX="414.0" layoutY="91.0" text="JavaFX" textFill="#a1aec4" />
+      <Label fx:id="noteCodidatJobOffer" layoutX="488.0" layoutY="39.0" text="8.5" textFill="#ff0202">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="takeinterviewCodidatJobOfferBttn" layoutX="548.0" layoutY="33.0" text="Take for Interview" textFill="#a1aec4" />
+      <JFXButton fx:id="rejectedCodidatJobOfferBttn" layoutX="568.0" layoutY="68.0" text="Rejected" textFill="#a1aec4" />
+   </children>
+</AnchorPane>

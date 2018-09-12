@@ -1,0 +1,378 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	template="/template/templateEmployee.xhtml">
+
+
+
+
+	<ui:define name="pageContent">
+
+		<style>
+.slidecontainer {
+	width: 100%;
+}
+
+.slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 15px;
+	border-radius: 5px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+.slider:hover {
+	opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #1976d2;
+	cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #1976d2;
+	cursor: pointer;
+}
+</style>
+
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card bg-primary p-20">
+					<div class="media widget-ten">
+						<div class="media-left meida media-middle">
+							<span><i class="ti-bag f-s-40"></i></span>
+						</div>
+						<div class="media-body media-text-right">
+							<h2 class="color-white">#{employeeProfileBean.projectsEmp.size()}</h2>
+							<p class="m-b-0">ALL Projects</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card bg-pink p-20">
+					<div class="media widget-ten">
+						<div class="media-left meida media-middle">
+							<span><i class="ti-comment f-s-40"></i></span>
+						</div>
+						<div class="media-body media-text-right">
+							<h2 class="color-white">#{tasksDetailsBean.taskEmpList.size()}</h2>
+							<p class="m-b-0">ALL Tasks</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card bg-success p-20">
+					<div class="media widget-ten">
+						<div class="media-left meida media-middle">
+							<span><i class="ti-vector f-s-40"></i></span>
+						</div>
+						<div class="media-body media-text-right">
+							<h2 class="color-white">#{tasksDetailsBean.alltodos}</h2>
+							<p class="m-b-0">ALL To Do</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<h:form id="allTasks">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="card-body">
+						<div class="card">
+							<div class="card-title">
+								<h2 style="color: #107597; font-weight: 800;">MANAGE ALL MY
+									TASKS</h2>
+								<br /> <br />
+								<div class="table-responsive">
+									<table class="table table-bordered ">
+										<thead>
+											<tr>
+												<th>Task Name</th>
+												<th>Project Name</th>
+												<th>Importance</th>
+												<th>Start Date</th>
+												<th>End Date</th>
+												<th>Progress</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<ui:repeat var="task" value="#{tasksDetailsBean.taskEmpList}">
+												<tr>
+													<td
+														style="color: #277554; font-weight: 700; font-style: italic;">#{task.taskPk.name}</td>
+													<td
+														style="color: #277554; font-weight: 700; font-style: italic;">#{task.project.name}</td>
+
+													<td><h:panelGroup
+															rendered="#{employeeProfileBean.taskImportance(task.importance)==1 }">
+															<span class="badge badge-success">Low Importance</span>
+														</h:panelGroup> <h:panelGroup
+															rendered="#{employeeProfileBean.taskImportance(task.importance)==2 }">
+															<span class="badge badge-warning">Medium
+																Importance</span>
+														</h:panelGroup> <h:panelGroup
+															rendered="#{employeeProfileBean.taskImportance(task.importance)==3 }">
+															<span class="badge badge-danger">Height Importance</span>
+														</h:panelGroup></td>
+
+													<td class="color-primary"><h:outputLabel
+															styleClass="font-weight-bold" value="#{task.startDate}">
+															<f:convertDateTime pattern="dd-MM-yyyy" />
+														</h:outputLabel></td>
+													<td class="color-danger font-weight-bold"><h:outputLabel
+															styleClass="font-weight-bold" value="#{task.endDate}">
+															<f:convertDateTime pattern="dd-MM-yyyy" />
+														</h:outputLabel></td>
+													<td><span class="pull-right">#{task.taskNote.intValue()}%</span>
+
+														<h:panelGroup
+															rendered="#{employeeProfileBean.taskProgress(task.taskNote)==1 }">
+															<div class="progress ">
+																<div role="progressbar"
+																	style="width: #{task.taskNote.intValue()}%; height: 8px;"
+																	class="progress-bar bg-danger wow animated progress-animated">
+																	<span class="sr-only">60% Complete</span>
+																</div>
+															</div>
+														</h:panelGroup> <h:panelGroup
+															rendered="#{employeeProfileBean.taskProgress(task.taskNote)==2 }">
+															<div class="progress ">
+																<div role="progressbar"
+																	style="width: #{task.taskNote.intValue()}%; height: 8px;"
+																	class="progress-bar bg-warning wow animated progress-animated">
+																	<span class="sr-only">60% Complete</span>
+																</div>
+															</div>
+														</h:panelGroup> <h:panelGroup
+															rendered="#{employeeProfileBean.taskProgress(task.taskNote)==3 }">
+															<div class="progress ">
+																<div role="progressbar"
+																	style="width: #{task.taskNote.intValue()}%; height: 8px;"
+																	class="progress-bar bg-success wow animated progress-animated">
+																	<span class="sr-only">60% Complete</span>
+																</div>
+															</div>
+														</h:panelGroup>
+														<div align="center">
+															<h:commandButton
+																action="#{tasksDetailsBean.printTaskSelected()}"
+																value="update" class="btn btn-info btn-xs m-b-10 m-l-5" a:style="margin-top:10px">
+																<f:setPropertyActionListener
+																	target="#{tasksDetailsBean.selectedTask}"
+																	value="#{task}" />
+																<f:ajax render="taskprogress" />
+															</h:commandButton>
+														</div></td>
+
+												</tr>
+
+											</ui:repeat>
+
+										</tbody>
+
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</h:form>
+
+		<h:form id="taskprogress">
+			<h:panelGroup rendered="#{tasksDetailsBean.showProgress == 1}">
+				<div class="row">
+					<div class="col-lg-7">
+						<div class="card-body">
+							<div class="card">
+								<div class="card-title">
+									<h2 style="color: #107597; font-weight: 800;">Update
+										progress of
+										"#{tasksDetailsBean.selectedTask.taskPk.name.toUpperCase()}"
+										IN
+										"#{tasksDetailsBean.selectedTask.project.name.toUpperCase()}"
+										Project</h2>
+									<br /> <br />
+									<div class="form-group row">
+										<div class="col-lg-8">
+											<div class="slidecontainer">
+												<h:inputText value="#{tasksDetailsBean.progressUp}"
+													a:type="range" a:min="1" a:max="100" class="slider"
+													id="slider555" />
+												<p>
+													<h:outputLabel styleClass="color-info; font-weight-bold"
+														value="Progress:   " />
+													<span style="font-size: 600; color: blue" id="value3">
+													</span>%
+												</p>
+
+												<div align="center">
+													<h:commandButton
+														class="btn btn-warning btn-xs m-b-10 m-l-10" 
+														action="#{tasksDetailsBean.updateSelectedTask()}"
+														value="CONFIRM">
+													</h:commandButton>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div class="col-lg-4">
+						<div class="card">
+							<div class="card-title">
+								<h4>Todo</h4>
+							</div>
+							<div class="todo-list">
+								<div class="tdl-holder">
+									<div class="tdl-content">
+										<ul>
+											<ui:repeat var="todo" value="#{tasksDetailsBean.todos}">
+												<h:panelGroup
+													rendered="#{tasksDetailsBean.statusTodo(todo.status)== 1}">
+													<li class="color-primary"><label> <input
+															type="checkbox" /><i class="bg-primary" /><span>#{todo.content}</span>
+															<h:commandButton
+																action="#{tasksDetailsBean.updateToDostatusTask(todo)}"
+																value="OK" class="btn btn-info btn-xs m-b-10 m-l-5">
+																<f:ajax render="taskprogress" />
+															</h:commandButton>
+													</label></li>
+												</h:panelGroup>
+
+												<h:panelGroup
+													rendered="#{tasksDetailsBean.statusTodo(todo.status)== 2}">
+													<li class="color-primary"><label> <input
+															type="checkbox" checked="checked" /><i
+															class="bg-primary" /><span>#{todo.content}</span> <h:commandButton
+																action="#{tasksDetailsBean.updateToDostatusTask(todo)}"
+																value="OK" class="btn btn-info btn-xs m-b-10 m-l-5">
+																<f:ajax render="taskprogress" />
+															</h:commandButton>
+													</label></li>
+												</h:panelGroup>
+											</ui:repeat>
+
+										</ul>
+									</div>
+									<h:inputText value="#{tasksDetailsBean.toDoContent}"
+										class="tdl-new form-control" a:placeholder="Type here" />
+									<br />
+									<div align="center">
+										<h:commandButton class="btn btn-warning btn-xs m-b-10 m-l-5"
+											action="#{tasksDetailsBean.addTodoTask()}" value="ADD TODO">
+										</h:commandButton>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+				</div>
+				<script>
+		var note1 = document.getElementById("taskprogress:slider555");
+		var output = document.getElementById("value3");
+		output.innerHTML = note1.value;		
+		note1.oninput = function() {
+		output.innerHTML = this.value;		
+		}
+		</script>
+			</h:panelGroup>
+		</h:form>
+
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="card">
+					<div class="card-title">
+						<h4>Pie Chart</h4>
+					</div>
+					<div class="flot-container">
+						<div id="flot-pie" class="flot-pie-container"></div>
+					</div>
+				</div>
+				<!-- /# card -->
+			</div>
+			<!-- /# column -->
+			<!-- /# column -->
+		</div>
+
+		<h:inputHidden id="task1" value="#{tasksDetailsBean.task1}" />
+		<h:inputHidden id="task2" value="#{tasksDetailsBean.task2}" />
+		<h:inputHidden id="task3" value="#{tasksDetailsBean.task3}" />
+
+
+		<h:inputHidden id="to1" value="#{tasksDetailsBean.todos1}" />
+		<h:inputHidden id="to2" value="#{tasksDetailsBean.todos2}" />
+		<h:inputHidden id="to3" value="#{tasksDetailsBean.todos3}" />
+
+
+		<script type="text/javascript">
+
+		var tsk1 = document.getElementById("task1");
+		var tsk2 = document.getElementById("task2");
+		var tsk3 = document.getElementById("task3");
+
+		var td1 = document.getElementById("to1");
+		var td2 = document.getElementById("to2");
+		var td3 = document.getElementById("to3");
+
+		
+            var dataPie = [
+        {
+            label: tsk1.value,
+            data: td1.value,
+            color: "#8fc9fb"
+        },
+        {
+            label: tsk2.value,
+            data: td2.value,
+            color: "#007BFF"
+        },
+        {
+            label: tsk3.value,
+            data: td3.value,
+            color: "#DC3545"
+        }
+    ];
+        
+    </script>
+
+
+
+	</ui:define>
+
+
+</ui:composition>

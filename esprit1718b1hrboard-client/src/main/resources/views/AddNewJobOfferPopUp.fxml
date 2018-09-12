@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addNewJobOffer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: a1aec4;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.AddNewJobOfferPopUpController">
+   <children>
+      <Label layoutX="125.0" layoutY="33.0" text="Add New Job Offer" textFill="#324f6b">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="90.0" text="Entitled" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="entitledNewJobOffer" layoutX="195.0" layoutY="86.0" />
+      <Label layoutX="79.0" layoutY="126.0" text="Description" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="DescriptionNewJobOffer" layoutX="194.0" layoutY="121.0" />
+      <Label layoutX="159.0" layoutY="173.0" text="Offer type" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="cdiNewJobOfferRadioBttn" layoutX="61.0" layoutY="208.0" selected="true" text="CDI" textFill="#324f6b">
+         <toggleGroup>
+            <ToggleGroup fx:id="type" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="cddNewJobOfferRadioBttn" layoutX="159.0" layoutY="208.0" text="CDD" textFill="#324f6b" toggleGroup="$type" />
+      <JFXRadioButton fx:id="trainshipNewJobOfferRadioBttn" layoutX="249.0" layoutY="208.0" text="Trainship" textFill="#324f6b" toggleGroup="$type" />
+      <Label layoutX="151.0" layoutY="268.0" text="Skill Require " textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="362.0" text="Skill Coeficient" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="skill1NewJobOfferCheckbox" layoutX="39.0" layoutY="306.0" prefHeight="25.0" prefWidth="91.0" />
+      <JFXComboBox fx:id="skill2NewJobOfferCheckbox" layoutX="155.0" layoutY="306.0" prefHeight="25.0" prefWidth="91.0" />
+      <JFXComboBox fx:id="skill3NewJobOfferCheckbox" layoutX="272.0" layoutY="306.0" prefHeight="25.0" prefWidth="91.0" />
+      <Spinner fx:id="skill1NewJobOfferSpinBttn" layoutX="42.0" layoutY="411.0" prefHeight="25.0" prefWidth="91.0" />
+      <Spinner fx:id="skill3NewJobOfferSpinBttn" layoutX="271.0" layoutY="411.0" prefHeight="25.0" prefWidth="91.0" />
+      <Spinner fx:id="skill2NewJobOfferSpinBttn" layoutX="155.0" layoutY="411.0" prefHeight="25.0" prefWidth="91.0" />
+      <JFXButton fx:id="addJobOfferbttn" layoutX="154.0" layoutY="451.0" prefHeight="25.0" prefWidth="88.0" text="Add">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

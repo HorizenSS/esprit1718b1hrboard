@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane fx:id="WraperPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.AddPostPopUpController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="PopUpPane" prefHeight="337.0" prefWidth="475.0">
+         <children>
+            <JFXTextArea fx:id="Description" layoutX="90.0" layoutY="138.0" prefHeight="53.0" prefWidth="335.0" promptText="Put a descriptiuon for this Post here." style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" />
+            <Label fx:id="lblFirstLastName" layoutX="163.0" layoutY="3.0" prefHeight="29.0" prefWidth="149.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #6a7d9a;" text="Add Post to the List" />
+            <TextField fx:id="Code" layoutX="91.0" layoutY="37.0" promptText="Code" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" />
+            <MaterialDesignIconView fill="#7387a8" glyphName="BARCODE" layoutX="62.0" layoutY="56.0" size="17.0" wrappingWidth="20.666631162166595" />
+            <MaterialDesignIconView fill="#7387a8" glyphName="TIE" layoutX="61.0" layoutY="109.0" size="17.0" text="" wrappingWidth="22.000005185604095" />
+            <MaterialDesignIconView fill="#7387a8" glyphName="HOME" layoutX="61.0" layoutY="239.0" size="17.0" wrappingWidth="22.000005185604095" />
+            <TextField fx:id="Entitled" layoutX="91.0" layoutY="87.0" promptText="Entitled" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" />
+            <JFXButton fx:id="AddPostToList" layoutX="376.0" layoutY="269.0" onMouseClicked="#OnAddPostToListClicked" style="-fx-background-color: #6a7d9a;" text="+" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </JFXButton>
+            <JFXComboBox fx:id="DepartmentComboBox" layoutX="91.0" layoutY="220.0" prefHeight="25.0" prefWidth="175.0" promptText="Department" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

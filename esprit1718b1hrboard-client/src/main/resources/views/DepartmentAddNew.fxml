@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<StackPane fx:id="WraperPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.DepartmentAddNewController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="434.0" prefWidth="431.0">
+         <children>
+            <JFXTextField fx:id="namefield" layoutX="145.0" layoutY="47.0" promptText="Dep.Name" />
+            <JFXTextField fx:id="placefield" layoutX="145.0" layoutY="87.0" promptText="Dep.Place" />
+            <JFXTextArea fx:id="descriptionfield" layoutX="64.0" layoutY="125.0" prefHeight="61.0" prefWidth="331.0" promptText="Department's Description" />
+            <Label layoutX="50.0" layoutY="14.0" text="Fill the Current fields with the proper data :" />
+            <JFXTreeView fx:id="SupDepTree" layoutX="97.0" layoutY="230.0" prefHeight="116.0" prefWidth="248.0" />
+            <Label layoutX="64.0" layoutY="203.0" text="Choose the superDepartment :" />
+            <Label fx:id="Old_supdep" layoutX="187.0" layoutY="357.0" text="Old supdep" />
+            <JFXButton fx:id="ConfirmButton" layoutX="193.0" layoutY="389.0" onMouseClicked="#ConfirmationClicked" style="-fx-background-color: #6a7d9a;" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

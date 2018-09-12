@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="infoCondidatpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="278.0" prefWidth="300.0" style="-fx-background-color: a1aec4;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.InfoCondidatPopUpController">
+   <children>
+      <Label layoutX="8.0" layoutY="43.0" text="Firstname :" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="adresseCondidate" layoutX="86.0" layoutY="73.0" text="Adresse" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="73.0" text="Adresse :" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="140.0" text="Diploma : " textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lastnameCondidate" layoutX="220.0" layoutY="43.0" text="LastName" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="emailCondidate" layoutX="92.0" layoutY="107.0" text="Email" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="107.0" text="Email :" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="skill1Condidate" layoutX="52.0" layoutY="219.0" text="Skill1" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="148.0" layoutY="43.0" text="LastName :" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberCondidate" layoutX="220.0" layoutY="73.0" text="Number" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="153.0" layoutY="73.0" text="Number :" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="118.0" layoutY="182.0" text="Top Skills" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="firstnameCondidate" layoutX="79.0" layoutY="43.0" text="Firstname" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="140.0" text="Expirence :" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="expirienceCondidate" layoutX="218.0" layoutY="140.0" text="Expirence" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="DiplomaCondidate" layoutX="79.0" layoutY="140.0" text="Diploma" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="skill2Condidate" layoutX="132.0" layoutY="219.0" text="Skill2" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="skill3Condidate" layoutX="208.0" layoutY="219.0" text="Skill3" textFill="#324f6b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

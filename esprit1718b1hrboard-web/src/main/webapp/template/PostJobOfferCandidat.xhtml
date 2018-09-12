@@ -1,0 +1,338 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- Tell the browser to be responsive to screen width -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!-- Favicon icon -->
+<link rel="icon" type="image/png" sizes="16x16"
+	href="images/favicon.png" />
+<title>Ela - Bootstrap Admin Dashboard Template</title>
+<!-- Bootstrap Core CSS -->
+<link href="../resources/css/lib/bootstrap/bootstrap.min.css"
+	rel="stylesheet" />
+<!-- Custom CSS -->
+
+<link href="../resources/css/lib/calendar2/semantic.ui.min.css"
+	rel="stylesheet" />
+<link href="../resources/css/lib/calendar2/pignose.calendar.min.css"
+	rel="stylesheet" />
+<link href="../resources/css/lib/owl.carousel.min.css" rel="stylesheet" />
+<link href="../resources/css/lib/owl.theme.default.min.css"
+	rel="stylesheet" />
+<link href="../resources/css/helper.css" rel="stylesheet" />
+<link href="../resources/css/style.css" rel="stylesheet" />
+<style>
+.slidecontainer {
+	width: 100%;
+}
+
+.slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 15px;
+	border-radius: 5px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+.slider:hover {
+	opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #1976d2;
+	cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #1976d2;
+	cursor: pointer;
+}
+</style>
+</head>
+
+<body class="fix-header fix-sidebar">
+	<!-- Preloader - style you can find in spinners.css -->
+	<div class="preloader">
+		<svg class="circular" viewBox="25 25 50 50">
+			<circle class="path" cx="50" cy="50" r="20" fill="none"
+				stroke-width="2" stroke-miterlimit="10" /> </svg>
+	</div>
+	<!-- Main wrapper  -->
+	<!-- Page wrapper  -->
+	<div class="page-wrapper" style="margin-left: 1px">
+		<!-- Bread crumb -->
+		<div class="row page-titles">
+			<div class="col-md-5 align-self-center">
+				<h3 class="text-primary">Job Offer :
+					#{jobOfferBean.jobofferselected.entitled}</h3>
+			</div>
+			<div class="col-md-7 align-self-center">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="login.jsf">Home</a></li>
+					<li class="breadcrumb-item"><a href="joboffercandidat.jsf">Job
+							Offer</a></li>
+					<li class="breadcrumb-item active">Post</li>
+				</ol>
+			</div>
+		</div>
+		<!-- End Bread crumb -->
+		<!-- Container fluid  -->
+		<h:inputHidden id="idjobofferselected"
+			value="#{jobOfferBean.jobofferselected.id}" />
+		<h:panelGroup rendered="#{jobOfferBean.te==false}">
+			<div class="alert alert-danger" align="center">You Have Already
+				Posted In this Job Offer with this Email</div>
+		</h:panelGroup>
+
+		<div class="container-fluid">
+			<!-- Start Page Content -->
+			<div class="row justify-content-center">
+				<div class="col-lg-6">
+					<div class="card">
+						<div class="card-body">
+							<div class="form-validation">
+								<h:form class="form-valide" action="#" method="post">
+									<div class="form-group row">
+										<label class="col-lg-4 col-form-label" for="val-username">First
+											Name <span class="text-danger">*</span>
+										</label>
+										<div class="col-lg-6">
+											<h:inputText value="#{jobOfferBean.c.firstName}"
+												styleClass="form-control"
+												a:placeholder="Enter you're firstname" a:required="" />
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-lg-4 col-form-label" for="val-username">last
+											Name <span class="text-danger">*</span>
+										</label>
+										<div class="col-lg-6">
+											<h:inputText value="#{jobOfferBean.c.lastName}"
+												styleClass="form-control"
+												a:placeholder="Enter you're lastname" a:required="" />
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-lg-4 col-form-label" for="val-email">Email
+											<span class="text-danger">*</span>
+										</label>
+										<div class="col-lg-6">
+											<h:inputText value="#{jobOfferBean.c.email}"
+												styleClass="form-control" a:placeholder="Enter you're email"
+												a:required="" />
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-lg-4 col-form-label" for="val-email">Phone
+											Number <span class="text-danger">*</span>
+										</label>
+										<div class="col-lg-6">
+											<h:inputText value="#{jobOfferBean.c.phoneNumber}"
+												styleClass="form-control" a:placeholder="+216 XX-XXX-XXX"
+												a:required="" />
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-lg-4 col-form-label" for="val-email">Address
+											<span class="text-danger">*</span>
+										</label>
+										<div class="col-lg-6">
+											<h:inputText value="#{jobOfferBean.c.address}"
+												styleClass="form-control" a:placeholder="Contry/State"
+												a:required="" />
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-lg-4 col-form-label" for="val-email">Work
+											Experience <span class="text-danger">*</span>
+										</label>
+										<div class="col-lg-6">
+											<h:inputText value="#{jobOfferBean.c.workExperiences}"
+												styleClass="form-control" a:placeholder="Years"
+												a:required="" />
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-lg-4 col-form-label" for="val-email">
+											Professional Title <span class="text-danger">*</span>
+										</label>
+										<div class="col-lg-6">
+											<h:inputText value="#{jobOfferBean.c.diplomas}"
+												styleClass="form-control"
+												a:placeholder="Ingenieur/thechnicien" a:required="" />
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-lg-4 col-form-label" for="val-range">#{jobOfferBean.jobofferselected.jobOfferSkills.get(0).skill.name}
+											note <span class="text-danger">*</span>
+										</label>
+										<div class="col-lg-6">
+											<div class="slidecontainer">
+												<h:inputText value="#{jobOfferBean.note}" a:type="range"
+													a:min="1" a:max="10" class="slider" id="slider1" />
+												<p>
+													Value: <span id="value1"></span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-lg-4 col-form-label" for="val-range">#{jobOfferBean.jobofferselected.jobOfferSkills.get(1).skill.name}
+											note <span class="text-danger">*</span>
+										</label>
+										<div class="col-lg-6">
+											<div class="slidecontainer">
+												<h:inputText value="#{jobOfferBean.note1}" a:type="range"
+													a:min="1" a:max="10" class="slider" id="slider2" />
+												<p>
+													Value: <span id="value2"></span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-lg-4 col-form-label" for="val-range">#{jobOfferBean.jobofferselected.jobOfferSkills.get(2).skill.name}
+											note <span class="text-danger">*</span>
+										</label>
+										<div class="col-lg-6">
+											<div class="slidecontainer">
+												<h:inputText value="#{jobOfferBean.note2}" a:type="range"
+													a:min="1" a:max="10" class="slider" id="slider3" />
+												<p>
+													Value: <span id="value3"> </span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-lg-4 col-form-label"><a
+											data-toggle="modal" data-target="#modal-terms" href="#">Terms
+												&amp; Conditions</a> <span class="text-danger">*</span></label>
+										<div class="col-lg-8">
+											<label class="css-control css-control-primary css-checkbox"
+												for="val-terms"> <input type="checkbox"
+												class="css-control-input" id="val-terms" name="val-terms"
+												value="1" /><span class="css-control-indicator"></span> I
+												agree to the terms
+											</label>
+										</div>
+									</div>
+									<div class="form-group row">
+										<div class="col-lg-8 ml-auto">
+											<h:commandButton action="#{jobOfferBean.finalpost()}"
+												value="Validate" class="btn btn-primary" />
+										</div>
+									</div>
+								</h:form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<!-- End PAge Content -->
+		</div>
+		<!-- End Container fluid  -->
+		<!-- footer -->
+		<footer class="footer">
+			© 2018 All rights reserved. Template designed by <a
+				href="https://colorlib.com">ALLSTAR</a>
+		</footer>
+		<!-- End footer -->
+	</div>
+	<!-- End Page wrapper  -->
+
+	<!-- End Wrapper -->
+	<script>
+		var note1 = document.getElementById("j_idt5:slider1");
+		var output = document.getElementById("value1");
+		output.innerHTML = note1.value;
+
+		note1.oninput = function() {
+ 			output.innerHTML = this.value;
+		}
+	</script>
+	<script>
+		var note2 = document.getElementById("j_idt5:slider2");
+		var output1 = document.getElementById("value2");
+		output1.innerHTML = note2.value;
+
+		note2.oninput = function() {
+ 			output1.innerHTML = this.value;
+		}
+	</script>
+	<script>
+		var note3 = document.getElementById("j_idt5:slider3");
+		var output2 = document.getElementById("value3");
+		output2.innerHTML = note3.value;
+
+		note3.oninput = function() {
+ 			output2.innerHTML = this.value;
+		}
+	</script>
+	<!-- All Jquery -->
+	<script src="../resources/js/lib/jquery/jquery.min.js"></script>
+	<!-- Bootstrap tether Core JavaScript -->
+	<script src="../resources/js/lib/bootstrap/js/popper.min.js"></script>
+	<script src="../resources/js/lib/bootstrap/js/bootstrap.min.js"></script>
+	<!-- slimscrollbar scrollbar JavaScript -->
+	<script src="../resources/js/jquery.slimscroll.js"></script>
+	<!--Menu sidebar -->
+	<script src="../resources/js/sidebarmenu.js"></script>
+	<!--stickey kit -->
+	<script
+		src="../resources/js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
+	<!--Custom JavaScript -->
+
+
+	<!-- Amchart -->
+	<script src="../resources/js/lib/morris-chart/raphael-min.js"></script>
+	<script src="../resources/js/lib/morris-chart/morris.js"></script>
+	<script src="../resources/js/lib/morris-chart/dashboard1-init.js"></script>
+
+
+	<script src="../resources/js/lib/calendar-2/moment.latest.min.js"></script>
+	<!-- scripit init-->
+	<script src="../resources/js/lib/calendar-2/semantic.ui.min.js"></script>
+	<!-- scripit init-->
+	<script src="../resources/js/lib/calendar-2/prism.min.js"></script>
+	<!-- scripit init-->
+	<script src="../resources/js/lib/calendar-2/pignose.calendar.min.js"></script>
+	<!-- scripit init-->
+	<script src="../resources/js/lib/calendar-2/pignose.init.js"></script>
+
+	<script src="../resources/js/lib/owl-carousel/owl.carousel.min.js"></script>
+	<script src="../resources/js/lib/owl-carousel/owl.carousel-init.js"></script>
+	<script src="../resources/js/scripts.js"></script>
+	<!-- scripit init-->
+	<script src="../resources/js/lib/peitychart/jquery.peity.min.js"></script>
+	<script src="../resources/js/lib/peitychart/peitychart.init.js"></script>
+	<script src="../resources/js/custom.min.js"></script>
+
+</body>
+
+</html>

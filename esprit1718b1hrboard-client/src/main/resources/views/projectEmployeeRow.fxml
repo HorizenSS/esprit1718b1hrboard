@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="projectRow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Separator layoutX="112.0" orientation="VERTICAL" prefHeight="100.0" prefWidth="2.0" />
+      <Separator layoutX="527.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="100.0" prefWidth="6.0" />
+      <Pane prefHeight="100.0" prefWidth="112.0" style="-fx-background-color: #F6E8B1;">
+         <children>
+            <Label layoutX="7.0" layoutY="1.0" prefHeight="18.0" prefWidth="101.0" style="-fx-text-fill: G;" text="Project MASTER" textFill="#9a4141">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="46.0" fitWidth="51.0" layoutX="34.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/avatar.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblMasterName" layoutX="1.0" layoutY="71.0" prefHeight="16.0" prefWidth="110.0" text="Name " textAlignment="CENTER">
+               <font>
+                  <Font name="Comic Sans MS" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="115.0" prefHeight="100.0" prefWidth="413.0" style="-fx-background-color: F6E497;">
+         <children>
+            <Label fx:id="lblProjectName" layoutX="120.0" layoutY="2.0" prefHeight="16.0" prefWidth="184.0" text="Name ">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="35.0" prefHeight="18.0" prefWidth="80.0" style="-fx-text-fill: G;" text="Start Date :" textFill="#547540">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="5.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_Calendar_48px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblStartDate" layoutX="105.0" layoutY="36.0" prefHeight="16.0" prefWidth="100.0" text="Start Date">
+               <font>
+                  <Font name="Comic Sans MS" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="226.0" layoutY="35.0" prefHeight="18.0" prefWidth="80.0" style="-fx-text-fill: G;" text="End Date :" textFill="#bf1837">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="205.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_Calendar_48px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblEndDate" layoutX="301.0" layoutY="36.0" prefHeight="16.0" prefWidth="100.0" text="End Date">
+               <font>
+                  <Font name="Comic Sans MS" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="304.0" layoutY="1.0" prefHeight="18.0" prefWidth="54.0" style="-fx-text-fill: G;" text="Status :" textFill="#9a4141">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblStatus" layoutX="354.0" layoutY="2.0" prefHeight="16.0" prefWidth="38.0" text="Status">
+               <font>
+                  <Font name="Comic Sans MS" size="11.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="26.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/project-icon2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="44.0" layoutY="70.0" prefHeight="18.0" prefWidth="100.0" style="-fx-text-fill: G;" text="Client Feedback" textFill="#6487cc">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="15.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/OK.png" />
+               </image>
+            </ImageView>
+            <ProgressIndicator fx:id="clientFeedbackProgress" layoutX="144.0" layoutY="64.0" prefHeight="36.0" prefWidth="43.0" progress="0.68" />
+            <Label layoutX="258.0" layoutY="68.0" prefHeight="18.0" prefWidth="57.0" style="-fx-text-fill: G;" text="Value :" textFill="#ee5757">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="valueProject" layoutX="308.0" layoutY="69.0" prefHeight="16.0" prefWidth="100.0" text="Value">
+               <font>
+                  <Font name="Comic Sans MS" size="11.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="24.0" fitWidth="25.0" layoutX="233.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/money-icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="170.0" layoutY="2.0" prefHeight="18.0" prefWidth="59.0" style="-fx-text-fill: G;" text="Project :" textFill="#9a4141">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Pane fx:id="tasksEmployeeBtn" layoutX="530.0" prefHeight="100.0" prefWidth="69.0" style="-fx-background-color: ab5e06;">
+         <children>
+            <Label layoutX="21.0" layoutY="42.0" text="Tasks">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

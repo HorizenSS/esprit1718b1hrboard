@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.HirringController">
+   <children>
+      <HBox prefHeight="50.0" prefWidth="950.0">
+         <children>
+            <Button fx:id="jobOffer_hiring_btn" mnemonicParsing="false" onAction="#OnClickJobOffer" prefHeight="50.0" prefWidth="475.0" style="-fx-background-color: #324f6b;" text="Job Offer" textFill="#a1aec4" />
+            <Button fx:id="interview_hiring_btn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnClickInterviews" prefHeight="50.0" prefWidth="475.0" style="-fx-background-color: #324f6b;" text="Interviews" textFill="#a1aec4" />
+         </children>
+      </HBox>
+      <Pane fx:id="hiring_pane" layoutY="50.0" prefHeight="560.0" prefWidth="950.0" />
+   </children>
+</AnchorPane>

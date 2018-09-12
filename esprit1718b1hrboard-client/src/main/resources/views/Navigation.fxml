@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="fullparent_id" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.NavigationController">
+   <children>
+      <Pane layoutX="139.0" prefHeight="42.0" prefWidth="961.0" style="-fx-background-color: #2A3F54;">
+         <children>
+            <ImageView fitHeight="42.0" fitWidth="162.0" layoutX="888.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/entreprise.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="widget_name_id" alignment="CENTER" layoutX="389.0" layoutY="9.0" prefHeight="25.0" prefWidth="183.0" text="widgetName" textAlignment="CENTER" textFill="#a1aec4" />
+         </children>
+      </Pane>
+      <VBox alignment="TOP_CENTER" prefHeight="650.0" prefWidth="150.0" style="-fx-background-color: #2A3F54;">
+         <children>
+            <VBox prefHeight="169.0" prefWidth="140.0">
+               <children>
+                  <ImageView fx:id="cnx_image_id" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" translateX="30.0" translateY="15.0">
+                     <image>
+                        <Image url="@../images/avatar.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="cnx_name_id" alignment="CENTER" prefHeight="25.0" prefWidth="183.0" text="Name" textAlignment="CENTER" textFill="#a1aec4" translateY="22.0" />
+                  <Label fx:id="cnx_role_id" alignment="CENTER" layoutY="160.0" prefHeight="14.0" prefWidth="140.0" text="Role" textFill="#a1aec4" translateY="30.0" />
+               </children>
+            </VBox>
+            <JFXButton fx:id="btnHome" prefHeight="42.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="nav-button" text="Home" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#a1aec4" glyphName="DASHBOARD" size="17.0" wrappingWidth="43.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnEntreprise" layoutX="10.0" layoutY="109.0" onAction="#OnClickEntrprise" prefHeight="42.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="nav-button" text="Entreprise" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#a1aec4" glyphName="VIEW_GRID" size="17.0" text="" wrappingWidth="43.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnEmployee" layoutX="10.0" layoutY="67.0" onAction="#OnClickEmployees" prefHeight="42.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="nav-button" text="Employees" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#a1aec4" glyphName="SHOPPING" size="17.0" wrappingWidth="42.99997329711914" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnHiring" onAction="#OnClickHiring" prefHeight="42.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="nav-button" text="Hiring" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#a1aec4" glyphName="ASTERISK" size="17.0" wrappingWidth="43.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnPayroll" layoutX="10.0" layoutY="193.0" onAction="#OnClickPayroll" prefHeight="42.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="nav-button" text="Payroll" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#a1aec4" glyphName="USER" size="17.0" wrappingWidth="43.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnTalentMg" layoutX="10.0" layoutY="151.0" onAction="#OnClickTalentMg" prefHeight="42.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="nav-button" text="Talent Mg" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#a1aec4" glyphName="VIEW_GRID" size="17.0" wrappingWidth="42.99997329711914" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnLeaveMg" layoutX="10.0" layoutY="235.0" onAction="#OnClickLeaveMg" prefHeight="42.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="nav-button" text="Leave Mg" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#a1aec4" glyphName="EXCLAMATION_TRIANGLE" size="17.0" wrappingWidth="43.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnActivityLogs" layoutX="10.0" layoutY="473.0" onAction="#OnClickActivityLogs" prefHeight="42.0" prefWidth="147.0" style="-fx-alignment: left;" styleClass="nav-button" text="Training" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#a1aec4" glyphName="USER" size="17.0" text="" wrappingWidth="43.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnAnalytics" layoutX="10.0" layoutY="431.0" onAction="#OnClickAnalytics" prefHeight="42.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="nav-button" text="Analytics" textFill="#a1aec4">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#a1aec4" glyphName="ASTERISK" size="17.0" wrappingWidth="43.0" />
+               </graphic>
+            </JFXButton>
+            <StackPane fx:id="out_id" prefHeight="160.0" prefWidth="150.0" />
+         </children>
+      </VBox>
+      <Pane fx:id="principal_scene_id" layoutX="150.0" layoutY="42.0" prefHeight="610.0" prefWidth="950.0" />
+   </children>
+</AnchorPane>

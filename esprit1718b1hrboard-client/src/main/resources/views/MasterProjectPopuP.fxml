@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="skillsProjectPane" maxWidth="206.0" minWidth="206.0" prefHeight="182.0" prefWidth="206.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.MasterProjectPopuPController">
+   <children>
+      <JFXButton fx:id="confirmMastreBtn" layoutX="29.0" layoutY="109.0" onAction="#OnActionConfirmMaster" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #F39C12;" text="          CONFIRM" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="masterCombo" layoutX="7.0" layoutY="35.0" prefHeight="25.0" prefWidth="188.0" />
+      <Label layoutX="56.0" text="Master Project" textFill="#b53838">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

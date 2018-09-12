@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="pop" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="359.0" prefWidth="600.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.ProjectInfoController">
+   <children>
+      <AnchorPane layoutX="91.0" prefHeight="355.0" prefWidth="414.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="62.0" layoutY="58.0" prefHeight="35.0" prefWidth="125.0" text="Name :" textFill="#838383">
+               <font>
+                  <Font name="Calibri Light" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="note" layoutX="261.0" layoutY="246.0" prefHeight="35.0" prefWidth="125.0" textFill="#838383">
+               <font>
+                  <Font name="Calibri Light" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="121.0" prefHeight="35.0" prefWidth="125.0" text="Start Date :" textFill="#838383">
+               <font>
+                  <Font name="Calibri Light" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="projectname" layoutX="224.0" layoutY="58.0" prefHeight="35.0" prefWidth="170.0" textFill="#838383">
+               <font>
+                  <Font name="Calibri Light" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="startdate" layoutX="224.0" layoutY="121.0" prefHeight="35.0" prefWidth="125.0" textFill="#838383">
+               <font>
+                  <Font name="Calibri Light" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="enddate" layoutX="224.0" layoutY="177.0" prefHeight="35.0" prefWidth="135.0" textFill="#838383">
+               <font>
+                  <Font name="Calibri Light" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="177.0" prefHeight="35.0" prefWidth="125.0" text="End Date :" textFill="#838383">
+               <font>
+                  <Font name="Calibri Light" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="246.0" prefHeight="35.0" prefWidth="180.0" text="client apreciation" textFill="#838383">
+               <font>
+                  <Font name="Calibri Light" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="111.0" layoutY="3.0" prefHeight="50.0" prefWidth="170.0" text="PROJECT">
+               <font>
+                  <Font name="System Bold" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

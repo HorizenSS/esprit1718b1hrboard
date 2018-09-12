@@ -1,0 +1,83 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	template="/template/templateEmployee.xhtml">
+
+	<ui:define name="pageContent">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="card card-outline-primary">
+					<h:panelGroup rendered="#{vacationBean.Etat(vacationBean.cvac.status)==1}">
+						<div class="card-header" style="background-color: #19672b">
+						<h4 class="m-b-0 text-white">#{vacationBean.cvac.vacationType.toString()}
+							Submitted in:
+							#{vacationBean.DatesToString(vacationBean.cvac.submissionDate)}</h4>
+					</div>
+					</h:panelGroup>
+					<h:panelGroup rendered="#{vacationBean.Etat(vacationBean.cvac.status)==0}">
+						<div class="card-header" style="background-color:#ef5350">
+						<h4 class="m-b-0 text-white">#{vacationBean.cvac.vacationType.toString()}
+							Submitted in:
+							#{vacationBean.DatesToString(vacationBean.cvac.submissionDate)}</h4>
+					</div>
+					</h:panelGroup>
+					
+					<div class="card-body">
+						<form action="#">
+							<div class="form-body">
+								<div class="row p-t-20">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label class="control-label " style="color: #0080ff">Start
+												Date : </label> <label class="control-label"
+												style="margin-left: 150dx">#{vacationBean.DatesToString(vacationBean.cvac.startDate)}</label>
+
+										</div>
+									</div>
+									<!--/span-->
+									<div class="col-md-6">
+										<div class="form-group ">
+											<label class="control-label" style="color: #0080ff">End
+												Date :</label> <label class="control-label">#{vacationBean.DatesToString(vacationBean.cvac.endDate)}</label>
+										</div>
+										<!--/span-->
+									</div>
+								</div>
+								<!--/row-->
+								<c:if test="#{vacationBean.Etat(vacationBean.cvac.status)!=-1}">
+									<div class="row p-t-20">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="control-label " style="color: #0080ff">Response
+													Message : </label>
+												<textarea class="control-label" rows="7" cols="45"
+													readonly="readonly" style="border: none;">#{vacationBean.cvac.responseMessage}</textarea>
+
+											</div>
+										</div>
+										<!--/span-->
+										<div class="col-md-6">
+											<div class="form-group ">
+												<label class="control-label" style="color: #0080ff">Response
+													Date :</label> <label class="control-label">#{vacationBean.DatesToString(vacationBean.cvac.responseDate)}</label>
+											</div>
+											<!--/span-->
+										</div>
+									</div>
+								</c:if>
+								<div class="form-actions">
+									<a type="button" href="YourVacationsList.jsf"
+										class="btn btn-success">Back to the list of vacations</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>

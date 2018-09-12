@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="refreshPane" prefHeight="568.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.ListProjectsController">
+   <children>
+      <JFXRadioButton fx:id="doingRadio" layoutX="228.0" layoutY="27.0" text="DOING" textFill="#4ba1a1">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="selectFilter" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="allRadio" layoutX="548.0" layoutY="27.0" selected="true" text="ALL" textFill="#4ba1a1" toggleGroup="$selectFilter">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="toDoRadio" layoutX="440.0" layoutY="27.0" text="TO DO" textFill="#4ba1a1" toggleGroup="$selectFilter">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="doneRadio" layoutX="336.0" layoutY="27.0" text="DONE" textFill="#4ba1a1" toggleGroup="$selectFilter">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXDatePicker layoutX="684.0" layoutY="18.0" maxHeight="26.0" minHeight="5.0" prefHeight="26.0" prefWidth="171.0" />
+      <StackPane fx:id="popUpStack" layoutX="81.0" layoutY="71.0">
+         <children>
+            <JFXListView fx:id="projectListView" prefHeight="400.0" prefWidth="785.0" />
+         </children>
+      </StackPane>
+      <JFXButton fx:id="newProjectBtn" layoutX="789.0" layoutY="501.0" onAction="#OnActionProjectAdd" prefHeight="30.0" prefWidth="128.0" style="-fx-background-color: #F39C12;" text="     New Project" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

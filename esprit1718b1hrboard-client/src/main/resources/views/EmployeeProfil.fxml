@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="568.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.EmployeeProfilController">
+   <children>
+      <JFXTabPane prefHeight="568.0" prefWidth="949.0">
+         <tabs>
+            <Tab fx:id="profilTab" onSelectionChanged="#profileChange" text="             Profil               ">
+               <content>
+                  <AnchorPane fx:id="profilePane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="696.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: white;" />
+               </content>
+            </Tab>
+            <Tab fx:id="absTab" onSelectionChanged="#absencesChanges" text="           Absences   &amp; Delays       ">
+               <content>
+                  <AnchorPane fx:id="absencesPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab fx:id="projectTab" onSelectionChanged="#projectsChange" text="             Projects         ">
+               <content>
+                  <AnchorPane fx:id="projectsPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

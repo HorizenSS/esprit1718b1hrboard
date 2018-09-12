@@ -1,0 +1,37 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	template="/template/templateEmployee.xhtml">
+
+	<ui:define name="pageContent">
+
+		<h1 class="text-primary">You Are Confused , Search For the Answer</h1>
+		<h:form id="formaskforum">
+			<div class="form-group">
+				<h:inputText a:placeholder="Search.." class="form-control"
+					value="#{forumBean.subject}" />
+				<h:commandButton value="Search" class="btn-block "
+					style="  background-color: #01DFA5 ; color:white  " 	action="#{forumBean.search()}" />
+			</div>
+		</h:form>
+		<h:form id="formsettext">
+			<div>
+			<h:inputText a:placeholder="subject.." class="form-control"
+					value="#{forumBean.subject}" />
+				<h:inputTextarea styleClass="form-control" row="10" col="100"
+					value="#{forumBean.title}" a:placeholder="title" />
+			</div>
+			<div>
+				<h:inputTextarea styleClass="form-control" row="10" col="100"
+					value="#{forumBean.content}" />
+			</div>
+
+			<h:commandButton value="Send" class="btn-block "
+				style="  background-color: #04B4AE ; color:white  "
+				action="#{forumBean.addTopic()}" />
+		</h:form>
+
+		</ui:define>
+</ui:composition>

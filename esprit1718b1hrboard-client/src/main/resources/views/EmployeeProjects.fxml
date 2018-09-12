@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="employeeProjectsStack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.EmployeeProjectsController">
+   <children>
+      <AnchorPane fx:id="PaneEmployeeProjects" prefHeight="533.0" prefWidth="949.0">
+         <children>
+            <JFXRadioButton fx:id="doingRadio" layoutX="284.0" layoutY="17.0" text="DOING" textFill="#4ba1a1">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="projectFilter" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="allRadio" layoutX="604.0" layoutY="17.0" selected="true" text="ALL" textFill="#4ba1a1" toggleGroup="$projectFilter">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="toDoRadio" layoutX="496.0" layoutY="17.0" text="TO DO" textFill="#4ba1a1" toggleGroup="$projectFilter">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="doneRadio" layoutX="392.0" layoutY="17.0" text="DONE" textFill="#4ba1a1" toggleGroup="$projectFilter">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXDatePicker layoutX="712.0" layoutY="8.0" maxHeight="26.0" minHeight="5.0" prefHeight="26.0" prefWidth="171.0" />
+            <JFXListView fx:id="projectEmployeeListView" layoutX="275.0" layoutY="67.0" prefHeight="433.0" prefWidth="615.0" />
+            <VBox layoutX="60.0" layoutY="17.0" prefHeight="203.0" prefWidth="110.0">
+               <children>
+                  <ImageView fx:id="imgProfilPic" fitHeight="109.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/avatar.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblFirstName" prefHeight="35.0" prefWidth="129.0" text="First Name" textAlignment="CENTER" textFill="#a1733e">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblLastName" prefHeight="35.0" prefWidth="129.0" text="Last Name" textAlignment="CENTER" textFill="#a1733e">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="18.0" prefWidth="110.0">
+                     <children>
+                        <MaterialDesignIconView fill="#7387a8" glyphName="TIE" size="17.0" text="" wrappingWidth="22.000005185604095" />
+                        <Label fx:id="lblPost" prefHeight="44.0" prefWidth="110.0" text="Post" textFill="#b92c0c">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

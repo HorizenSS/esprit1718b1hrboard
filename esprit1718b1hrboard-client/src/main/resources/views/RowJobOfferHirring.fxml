@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="joboffer_row_stackpane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="jobOffer_row_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="194.0" prefWidth="739.0" style="-fx-background-color: #324f6b;">
+         <children>
+            <Label layoutX="62.0" layoutY="52.0" text="Description" textFill="#a1aec4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="100.0" text="Date of creation " textFill="#a1aec4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateOfCreation_jobOffer" layoutX="98.0" layoutY="122.0" text="21/03/2018" textFill="#a1aec4" />
+            <Label layoutX="62.0" layoutY="140.0" text="Offer type" textFill="#a1aec4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="331.0" layoutY="23.0" text="Skills needed" textFill="#a1aec4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="skill1_jobOffer_label" layoutX="371.0" layoutY="59.0" text="JavaEE" textFill="#a1aec4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="skill2_jobOffer_label" layoutX="372.0" layoutY="91.0" text="MySQL" textFill="#a1aec4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="skill3_jobOffer_label" layoutX="372.0" layoutY="123.0" text="JavaFX" textFill="#a1aec4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="skill1_jobOffer_spinbtn" layoutX="447.0" layoutY="57.0" prefHeight="17.0" prefWidth="55.0" />
+            <Spinner fx:id="skill2_jobOffer_spinbtn" layoutX="447.0" layoutY="89.0" prefHeight="17.0" prefWidth="55.0" />
+            <Spinner fx:id="skill3_jobOffer_spinbtn" layoutX="446.0" layoutY="120.0" prefHeight="17.0" prefWidth="55.0" />
+            <TextField fx:id="description_jobOffer" layoutX="98.0" layoutY="74.0" prefHeight="25.0" prefWidth="167.0" />
+            <RadioButton fx:id="cdi_offerType_radiobtn" layoutX="97.0" layoutY="163.0" mnemonicParsing="false" selected="true" text="CDI" textFill="#a1aec4">
+               <toggleGroup>
+                  <ToggleGroup fx:id="offer" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="cdd_offerType_radiobtn" layoutX="159.0" layoutY="163.0" mnemonicParsing="false" text="CDD" textFill="#a1aec4" toggleGroup="$offer" />
+            <RadioButton fx:id="trainship_offerType_radiobtn" layoutX="222.0" layoutY="163.0" mnemonicParsing="false" text="Traineeship" textFill="#a1aec4" toggleGroup="$offer" />
+            <Button fx:id="saveChange_btn" layoutX="586.0" layoutY="57.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #324f6b;" text="Save Changes" textFill="#a1aec4" />
+            <Button fx:id="deleteJobOffer_btn" layoutX="586.0" layoutY="89.0" mnemonicParsing="false" style="-fx-background-color: #324f6b;" text="Delete Job Offer" textFill="#a1aec4" />
+            <Button fx:id="seeCondidate_btn" layoutX="586.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #324f6b;" text="See Condidate" textFill="#a1aec4" />
+            <Label layoutX="63.0" layoutY="5.0" text="Entitled" textFill="#a1aec4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="entitled_jobOffer1" layoutX="99.0" layoutY="25.0" prefHeight="25.0" prefWidth="167.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

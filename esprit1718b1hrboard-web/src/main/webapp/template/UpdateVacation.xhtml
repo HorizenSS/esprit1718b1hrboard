@@ -1,0 +1,95 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	template="/template/templateEmployee.xhtml">
+
+	<ui:define name="pageContent">
+		<div class="row">
+			<div class="col-12">
+				<div class="card">
+					<div class="card-body">
+						Your remaining vacation days you allowed to have : <span
+							class="color-success">#{vacationManageBean.e.vacationDays}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="card card-outline-primary">
+					<div class="card-body">
+						<form action="#">
+							<div class="form-body">
+								<h:form>
+									<div class="row p-t-20">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="control-label " style="color: #0080ff">Start
+													Date : </label>><br></br>
+												Write in this Form : Day-Month-Year
+												<br></br>
+												<h:inputText class="form-control"
+													value="#{vacationManageBean.vtou.startDate}">
+													<f:convertDateTime pattern="dd-MM-yyyy" />
+												</h:inputText>
+
+											</div>
+										</div>
+										<!--/span-->
+										<div class="col-md-6">
+											<div class="form-group ">
+												<label class="control-label" style="color: #0080ff">End
+													Date :</label>><br></br>
+												Write in this Form : Day-Month-Year
+												<br></br>
+												<h:inputText class="form-control"
+													value="#{vacationManageBean.vtou.endDate}">
+													<f:convertDateTime pattern="dd-MM-yyyy" />
+												</h:inputText>
+
+											</div>
+											<!--/span-->
+										</div>
+									</div>
+									<!--/row-->
+									<div class="row p-t-20">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="control-label " style="color: #0080ff">Submission
+													Message : </label><br></br>
+												<h:inputTextarea class="control-label" rows="7" cols="45"
+													value="#{vacationManageBean.vtou.sbmissionMessage}" />
+											</div>
+										</div>
+										<!--/span-->
+										<div class="col-md-6">
+											<div class="form-group ">
+												<label class="control-label" style="color: #0080ff">Vacation
+													Type :</label><br></br>
+												<h:selectOneMenu
+													value="#{vacationManageBean.vtou.vacationType}">
+													<f:selectItems value="#{vtData.VT}" var="vtypr"
+														itemValue="#{vtypr}" />
+												</h:selectOneMenu>
+											</div>
+											<!--/span-->
+										</div>
+									</div>
+									<h:commandButton class="btn btn-success"
+										action="#{vacationManageBean.Updatevac()}" value="Update" />
+
+									<a type="button" href="YourVacationsList.jsf"
+										class="btn btn-close">Back to the list of vacations</a>
+								</h:form>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>

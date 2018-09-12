@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rowCodidatInterview" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="119.0" prefWidth="785.0" style="-fx-background-color: #324f6b;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <StackPane fx:id="infocondidatStackPane" layoutX="30.0" layoutY="14.0">
+         <children>
+            <ImageView fx:id="imageCodidatInterview" fitHeight="78.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/avatar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <Label fx:id="nameCondidatInterview" alignment="CENTER" layoutX="34.0" layoutY="95.0" text="Nom Prenom" textFill="#a1aec4" />
+      <Label fx:id="noteCodidatInterview" layoutX="534.0" layoutY="38.0" text="8.5" textFill="#ff0202">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="HireCondidatInterview" layoutX="681.0" layoutY="33.0" text="Hire" textFill="#a1aec4" />
+      <JFXButton fx:id="RejectCondidatInterview" layoutX="676.0" layoutY="65.0" text="Reject" textFill="#a1aec4" />
+      <Label layoutX="164.0" layoutY="18.0" text="Interview Date :" textFill="#a1aec4" />
+      <Label layoutX="164.0" layoutY="62.0" text="entitled of the job offer posted in :" textFill="#a1aec4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="posetdJobOfferInterview" layoutX="207.0" layoutY="87.0" text="Devllopeur Web fullStack" textFill="#a1aec4" />
+      <Label fx:id="dateInterview" layoutX="206.0" layoutY="40.0" text="24/03/2018" textFill="#a1aec4" />
+      <JFXButton fx:id="reportInterviewBttn" layoutX="297.0" layoutY="36.0" text="Report the interview" textFill="#a1aec4" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,117 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	template="/template/templateEmployee.xhtml">
+
+	<ui:define name="pageContent">
+		<div class="tab-content">
+			<div class="tab-pane active" id="home" role="tabpanel">
+				<div class="card-body">
+					<hr>
+					<P />
+					<h1 style="margin-right: 150px">
+						<h:outputLabel styleClass="text-primary"
+							value="#{pageBean.title}" />
+					</h1>
+					</hr>
+
+					<div style="margin-left: 50px"></div>
+					<HR />
+					<div>
+						<h2>
+							<a href="#" class="link"><h:outputText
+									value="#{forumBean.employeeask.lastName}"
+									styleClass="mdi mdi-inbox font-18 align-middle mr-2" /></a>
+						</h2>
+						<div class="sl-item">
+							<div class="sl-left"></div>
+							<div class="sl-right"></div>
+							<div>
+								<div class="m-t-20 row">
+									<div class="col-md-3 col-xs-12">
+										<div class="col-md-9 col-xs-12">
+											<div style="margin-left: 50px">
+												<h:outputText value="#{forumBean.content}"
+													styleClass="media mb-4 mt-1" />
+											</div>
+											<h3>
+												<div class="like-comm m-t-20">
+													<a onclick="vaEtVient()" href="javascript:void(0)"
+														class="link m-r-10"
+														style="color: blue; font: 300; font-family: monospace; size:;">comment</a>
+												</div>
+											</h3>
+
+											<script>
+function vaEtVient(){
+		if(document.getElementById('invisible').style.display == 'none'){
+    	document.getElementById('invisible').style.display = 'block';
+  		}
+  		else {
+    	document.getElementById('invisible').style.display = 'none';
+		}
+}
+</script>
+											<div id="invisible" style="display: none">
+
+
+												<h:form id="formsettext2">
+
+													<div>
+
+														<TEXTAREA rows="10" cols="85">#{topicBean.content}</TEXTAREA>
+													</div>
+
+													<h:commandButton value="Send" class="btn-block "
+														action="#{topicBean.addTopic()}"
+														style="  background-color: #04B4AE ; color:white  " />
+												</h:form>
+
+
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<ui:repeat var="topic" value="#{pageBean.r}">
+			<h:panelGroup rendered="#{forumBean.bool==1}">
+			<div>
+					<a href="#" class="link"><h:outputText
+							value="#{pageBean.employeeask.lastName}"
+							styleClass="mdi mdi-inbox font-18 align-middle mr-2" /></a>
+
+					<div class="sl-item">
+						<div class="sl-left"></div>
+						<div class="sl-right">
+							<blockquote class="m-t-10">
+								<h:outputText value="#{topic.content}"
+									styleClass="media mb-4 mt-1" />
+
+							</blockquote>
+						</div>
+					</div>
+				</div></h:panelGroup>	
+							<h:panelGroup rendered="#{pageBean.bool==0}">
+							<label>there is no comments</label>
+							
+							</h:panelGroup>	
+				
+			</ui:repeat>
+
+
+
+
+		</div> 
+
+
+
+	</ui:define>
+</ui:composition>

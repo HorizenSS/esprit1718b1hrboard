@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="employeesProjectPane" maxWidth="310.0" minWidth="310.0" prefHeight="300.0" prefWidth="310.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.TeamListProjectController">
+   <children>
+      <JFXListView fx:id="employeesProjectListview" prefHeight="249.0" prefWidth="310.0" />
+      <JFXButton fx:id="confirmEmployeesBtn" layoutX="94.0" layoutY="258.0" onAction="#OnActionConfirmEmployees" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #F39C12;" text="          CONFIRM" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

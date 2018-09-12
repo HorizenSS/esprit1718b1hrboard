@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="533.0" prefWidth="949.0" style="-fx-background-color: blue;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.BenefitsPaneController">
+    
+</AnchorPane>

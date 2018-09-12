@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="project_Stackpane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.TrainingProjectController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="PTrainingPaneId" prefHeight="547.0" prefWidth="945.0">
+         <children>
+            <Label fx:id="Label" layoutX="49.0" layoutY="2.0" prefHeight="56.0" prefWidth="252.0" text=" Project List:" textFill="#422e65">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <ListView fx:id="ProjectListId" layoutX="77.0" layoutY="61.0" prefHeight="402.0" prefWidth="370.0" />
+            <ListView fx:id="ProjectTeamId" layoutX="490.0" layoutY="61.0" prefHeight="182.0" prefWidth="370.0" />
+            <ListView fx:id="ProjectSkillId" layoutX="491.0" layoutY="279.0" prefHeight="182.0" prefWidth="370.0" />
+            <Label fx:id="Label1" layoutX="491.0" layoutY="2.0" prefHeight="56.0" prefWidth="252.0" text=" Project's Team:" textFill="#422e65">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="Label2" layoutX="498.0" layoutY="234.0" prefHeight="56.0" prefWidth="252.0" text=" Project's Skills:" textFill="#422e65">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

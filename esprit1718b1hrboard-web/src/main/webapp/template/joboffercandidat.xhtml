@@ -1,0 +1,363 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- Tell the browser to be responsive to screen width -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!-- Favicon icon -->
+<link rel="icon" type="image/png" sizes="16x16"
+	href="images/favicon.png" />
+<title>Ela - Bootstrap Admin Dashboard Template</title>
+<!-- Bootstrap Core CSS -->
+<link href="../resources/css/lib/bootstrap/bootstrap.min.css"
+	rel="stylesheet" />
+<!-- Custom CSS -->
+
+<link href="../resources/css/lib/calendar2/semantic.ui.min.css"
+	rel="stylesheet" />
+<link href="../resources/css/lib/calendar2/pignose.calendar.min.css"
+	rel="stylesheet" />
+<link href="../resources/css/lib/owl.carousel.min.css" rel="stylesheet" />
+<link href="../resources/css/lib/owl.theme.default.min.css"
+	rel="stylesheet" />
+<link href="../resources/css/helper.css" rel="stylesheet" />
+<link href="../resources/css/style.css" rel="stylesheet" />
+</head>
+
+<body class="fix-header fix-sidebar">
+	<!-- Preloader - style you can find in spinners.css -->
+	<h:panelGroup rendered="#{jobOfferBean.switchte()==te}">
+
+	</h:panelGroup>
+	<div class="preloader">
+		<svg class="circular" viewBox="25 25 50 50">
+			<circle class="path" cx="50" cy="50" r="20" fill="none"
+				stroke-width="2" stroke-miterlimit="10" /> </svg>
+	</div>
+	<!-- Main wrapper  -->
+	<!-- Page wrapper  -->
+	<div class="page-wrapper" style="margin-left: 1px">
+		<!-- Bread crumb -->
+		<div class="row page-titles">
+			<div class="col-md-5 align-self-center">
+				<h3 class="text-primary">Job Offer</h3>
+			</div>
+			<div class="col-md-7 align-self-center">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="login.jsf">Home</a></li>
+					<li class="breadcrumb-item active">Job Offer</li>
+				</ol>
+			</div>
+		</div>
+		<!-- End Bread crumb -->
+		<!-- Container fluid  -->
+		<div class="container-fluid">
+			<!-- Start Page Content -->
+
+
+
+			<div class="row">
+				<div class="col-md-3">
+					<div class="card p-30" style="width: 400px">
+						<div class="media">
+							<div class="media-left meida media-middle">
+								<span><i class="fa fa-archive f-s-40 color-warning"></i></span>
+							</div>
+							<div class="media-body media-text-right">
+								<h2>#{jobOfferBean.nbjoboffer}</h2>
+								<p class="m-b-0">Job Offer</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card p-30" style="margin-left: 110px; width: 400px">
+						<div class="media">
+							<div class="media-left meida media-middle">
+								<span><i class="fa fa-user f-s-40 color-danger"></i></span>
+							</div>
+							<div class="media-body media-text-right">
+								<h2>#{jobOfferBean.nbcondidat}</h2>
+								<p class="m-b-0">Postuled Condidat</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card p-30" style="margin-left: 220px; width: 410px">
+						<div class="media">
+							<div class="media-left meida media-middle">
+								<span><i class="fa fa-shopping-cart f-s-40 color-success"></i></span>
+							</div>
+							<div class="media-body media-text-right">
+								<h2>#{jobOfferBean.nbcondidatneeded}</h2>
+								<p class="m-b-0">Condidat needed</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-3" style="margin-left: 340px">
+					<div class="card bg-dark" style="width: 600px" >
+						<div class="testimonial-widget-one p-17">
+							<div class="testimonial-widget-one owl-carousel owl-theme">
+								<div class="item">
+									<div class="testimonial-content">
+										<div class="testimonial-author" style="margin-top: 25px">Newest</div>
+										<div class="testimonial-author-position">Founder-Ceo.
+											Dell Corp</div>
+
+										<div class="testimonial-text">
+											<i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet,
+											consectetur adipisicing elit, sed do eiusmod tempor
+											incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+											veniam, quis nostrud exercitation . <i
+												class="fa fa-quote-right"></i>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="testimonial-content">
+										<img class="testimonial-author-img"
+											src="../resources/images/avatar/3.jpg" alt="" />
+										<div class="testimonial-author">Abraham</div>
+										<div class="testimonial-author-position">Founder-Ceo.
+											Dell Corp</div>
+
+										<div class="testimonial-text">
+											<i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet,
+											consectetur adipisicing elit, sed do eiusmod tempor
+											incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+											veniam, quis nostrud exercitation . <i
+												class="fa fa-quote-right"></i>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="testimonial-content">
+										<img class="testimonial-author-img"
+											src="../resources/images/avatar/1.jpg" alt="" />
+										<div class="testimonial-author">Lincoln</div>
+										<div class="testimonial-author-position">Founder-Ceo.
+											Dell Corp</div>
+
+										<div class="testimonial-text">
+											<i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet,
+											consectetur adipisicing elit, sed do eiusmod tempor
+											incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+											veniam, quis nostrud exercitation . <i
+												class="fa fa-quote-right"></i>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+				<h:form>
+					<ui:repeat var="joboffer" value="#{jobOfferBean.paginator.model}">
+
+						<div class="row bg-white m-l-0 m-r-0 box-shadow ">
+
+							<!-- column -->
+							<div class="col-lg-8">
+								<div style="margin-top: 15px">
+									<table align="center" style="margin-top: 50px">
+										<tr>
+											<td>
+												<h4 style="margin-right: 150px">Job Offer Entitled</h4>
+												<div style="margin-left: 50px">
+
+													<h:outputLabel value="#{joboffer.entitled}" />
+												</div>
+											</td>
+											<td>
+												<h4 align="left" style="margin-left: 40px">Job Offer
+													Description</h4>
+												<div style="margin-left: 100px">
+													<h:outputLabel value="#{joboffer.description}" />
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<h4>Job Offer Creation Date</h4>
+												<div style="margin-left: 50px">
+													<h:outputLabel value="#{joboffer.offerDate}" />
+												</div>
+											</td>
+											<td>
+												<h4 align="left" style="margin-left: 40px">Job Offer
+													Type</h4>
+												<div align="left" style="margin-left: 100px">
+													<h:outputLabel value="#{joboffer.offerType}" />
+												</div>
+											</td>
+										</tr>
+
+									</table>
+									<div style="margin-left: -100px">
+										<p class="data-attributes" style="margin-left: 500px">
+											<span
+												data-peity='{ "fill": ["indigo", "#eeeeee"], "innerRadius": 18, "radius": 20 }'>6/7</span>
+										<div
+											style="margin-left: 460px; margin-top: -13px; color: #1976d2">
+											43 condidate posted</div>
+										</p>
+									</div>
+									<br /> <br />
+									<div style="margin-left: 300px; margin-bottom: 15px">
+										<h:form>
+											<h:commandButton action="#{jobOfferBean.post(joboffer)}"
+												value="Post Here"
+												class="btn btn-info btn-rounded m-b-10 m-l-5"
+												style="width: 600px" />
+										</h:form>
+									</div>
+								</div>
+							</div>
+							<!-- column -->
+
+							<!-- column -->
+							<div class="col-lg-4">
+								<div class="card">
+									<div class="card-body browser">
+										<H4>Skill needed</H4>
+										<p class="f-w-600">
+											#{joboffer.jobOfferSkills.get(0).skill.name} <span
+												class="pull-right">#{joboffer.jobOfferSkills.get(0).level}</span>
+										</p>
+										<div class="progress ">
+											<div role="progressbar"
+												style="width: #{(joboffer.jobOfferSkills.get(0).level)*10}%; height: 8px;"
+												class="progress-bar bg-danger wow animated progress-animated">
+												<span class="sr-only">60% Complete</span>
+											</div>
+										</div>
+
+										<p class="m-t-30 f-w-600">
+											#{joboffer.jobOfferSkills.get(1).skill.name} <span
+												class="pull-right">#{joboffer.jobOfferSkills.get(1).level}</span>
+										</p>
+										<div class="progress">
+											<div role="progressbar"
+												style="width:  #{(joboffer.jobOfferSkills.get(1).level)*10}%; height: 8px;"
+												class="progress-bar bg-info wow animated progress-animated">
+												<span class="sr-only">60% Complete</span>
+											</div>
+										</div>
+
+										<p class="m-t-30 f-w-600">
+											#{joboffer.jobOfferSkills.get(2).skill.name}<span
+												class="pull-right">
+												#{joboffer.jobOfferSkills.get(2).level}</span>
+										</p>
+										<div class="progress">
+											<div role="progressbar"
+												style="width: #{(joboffer.jobOfferSkills.get(2).level)*10}%; height: 8px;"
+												class="progress-bar bg-warning wow animated progress-animated">
+												<span class="sr-only">60% Complete</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- column -->
+						</div>
+						<div>
+							<br />
+						</div>
+					</ui:repeat>
+					<div align="center">
+					<h:commandLink value="&lt; prev"
+						action="#{jobOfferBean.paginator.prev()}" class="btn btn-info btn-rounded m-b-10 m-l-5" />
+					<h:outputText
+						value="#{jobOfferBean.paginator.pageIndex} / #{jobOfferBean.paginator.pages}" class="btn btn-info btn-rounded m-b-10 m-l-5" />
+					<h:commandLink value="next &gt;"
+						action="#{jobOfferBean.paginator.next()}" class="btn btn-info btn-rounded m-b-10 m-l-5" />
+					<h:inputHidden value="#{jobOfferBean.paginator.pageIndex}" />
+					</div>
+				</h:form>
+
+
+			<div class="col-lg-8">
+				<div class="row">
+
+					<!-- /# column -->
+					<div class="col-lg-6">
+						<div class="card">
+							<div class="card-body">
+								<div class="year-calendar"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End PAge Content -->
+		</div>
+		<!-- End Container fluid  -->
+		<!-- footer -->
+		<footer class="footer">
+			© 2018 All rights reserved. Template designed by <a
+				href="https://colorlib.com">ALLSTAR</a>
+		</footer>
+		<!-- End footer -->
+	</div>
+	<!-- End Page wrapper  -->
+
+	<!-- End Wrapper -->
+	<!-- All Jquery -->
+	<script src="../resources/js/lib/jquery/jquery.min.js"></script>
+	<!-- Bootstrap tether Core JavaScript -->
+	<script src="../resources/js/lib/bootstrap/js/popper.min.js"></script>
+	<script src="../resources/js/lib/bootstrap/js/bootstrap.min.js"></script>
+	<!-- slimscrollbar scrollbar JavaScript -->
+	<script src="../resources/js/jquery.slimscroll.js"></script>
+	<!--Menu sidebar -->
+	<script src="../resources/js/sidebarmenu.js"></script>
+	<!--stickey kit -->
+	<script
+		src="../resources/js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
+	<!--Custom JavaScript -->
+
+
+	<!-- Amchart -->
+	<script src="../resources/js/lib/morris-chart/raphael-min.js"></script>
+	<script src="../resources/js/lib/morris-chart/morris.js"></script>
+	<script src="../resources/js/lib/morris-chart/dashboard1-init.js"></script>
+
+
+	<script src="../resources/js/lib/calendar-2/moment.latest.min.js"></script>
+	<!-- scripit init-->
+	<script src="../resources/js/lib/calendar-2/semantic.ui.min.js"></script>
+	<!-- scripit init-->
+	<script src="../resources/js/lib/calendar-2/prism.min.js"></script>
+	<!-- scripit init-->
+	<script src="../resources/js/lib/calendar-2/pignose.calendar.min.js"></script>
+	<!-- scripit init-->
+	<script src="../resources/js/lib/calendar-2/pignose.init.js"></script>
+
+	<script src="../resources/js/lib/owl-carousel/owl.carousel.min.js"></script>
+	<script src="../resources/js/lib/owl-carousel/owl.carousel-init.js"></script>
+	<script src="../resources/js/scripts.js"></script>
+	<!-- scripit init-->
+	<script src="../resources/js/lib/peitychart/jquery.peity.min.js"></script>
+	<script src="../resources/js/lib/peitychart/peitychart.init.js"></script>
+	<script src="../resources/js/custom.min.js"></script>
+
+</body>
+
+</html>

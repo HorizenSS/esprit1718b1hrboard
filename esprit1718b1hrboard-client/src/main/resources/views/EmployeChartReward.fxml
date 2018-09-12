@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="RewardChart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.EmployeChartRewardController">
+   <children>
+      <BarChart fx:id="BarcharReward" layoutX="-6.0" prefHeight="400.0" prefWidth="608.0">
+        <xAxis>
+          <CategoryAxis label="Projects Names" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis prefHeight="338.0" prefWidth="34.0" side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

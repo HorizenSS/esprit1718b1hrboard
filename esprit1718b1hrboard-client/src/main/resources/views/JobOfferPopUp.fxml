@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="popup_liste_jobOffer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="289.0" prefWidth="700.0" style="-fx-background-color: a1aec4;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.JobOfferPopUpController">
+   <children>
+      <ListView fx:id="condidate_list_popup_jobOffer" layoutX="15.0" layoutY="18.0" prefHeight="250.0" prefWidth="670.0" />
+   </children>
+</AnchorPane>

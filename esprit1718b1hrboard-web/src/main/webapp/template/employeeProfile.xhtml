@@ -1,0 +1,556 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	template="/template/templateEmployee.xhtml">
+
+	<ui:define name="pageContent">
+		<div class="row">
+			<!-- Column -->
+			<div class="col-lg-12">
+				<div class="card">
+					<div class="card-body">
+						<div class="card-two">
+							<header>
+								<div class="avatar">
+									<img
+										src="../resources/images/users/#{employeeProfileBean.employeeProfile.profilPic}"
+										alt="#{employeeProfileBean.employeeProfile.firstName} #{employeeProfileBean.employeeProfile.lastName}" />
+								</div>
+							</header>
+
+							<h3>#{employeeProfileBean.employeeProfile.firstName}
+								#{employeeProfileBean.employeeProfile.lastName}</h3>
+							<div class="desc">
+								#{employeeProfileBean.employeeProfile.post.entitled}</div>
+							<div class="contacts">
+								<a href=""><i class="fa fa-plus"></i></a> <a href=""><i
+									class="fa fa-whatsapp"></i></a> <a href=""><i
+									class="fa fa-envelope"></i></a>
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Column -->
+			<!-- Column -->
+			<div class="col-lg-12">
+				<div class="card">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs profile-tab" role="tablist">
+						<li class="nav-item"><a class="nav-link active"
+							data-toggle="tab" href="#home" role="tab">Timeline</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab"
+							href="#profile" role="tab">Profile</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab"
+							href="#settings" role="tab">Settings</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab"
+							href="#Projects" role="tab">My Projects</a></li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane active" id="home" role="tabpanel">
+							<div class="card-body">
+								<div class="profiletimeline">
+									<br />
+									<h:form>
+										<div class="form-group has-success has-feedback">
+											<div class="row">
+												<div class="col-sm-7">
+													<div class="input-group">
+														<span class="input-group-addon"><i class="ti-user"></i></span>
+														<h:inputText value="#{employeeProfileBean.postContent}"
+															class="form-control"
+															a:placeholder="Post something in the TimeLine...."></h:inputText>
+													</div>
+													<span class="ti-check form-control-feedback"></span> <span
+														class="sr-only">(success)</span>
+												</div>
+												<div class="col-sm-3">
+													<h:commandButton
+														action="#{employeeProfileBean.addToTimeLine()}"
+														value="Post"
+														class="btn btn-success btn-outline m-b-10 m-l-5">
+													</h:commandButton>
+												</div>
+											</div>
+										</div>
+									</h:form>
+
+									<ui:repeat var="time" value="#{employeeProfileBean.timeline}">
+										<h:form>
+											<div class="sl-item">
+												<div class="sl-left">
+													<img
+														src="../resources/images/users/#{time.employee.profilPic}"
+														alt="user" class="img-circle" />
+												</div>
+												<div class="sl-right">
+													<div>
+														<a href="#" class="link">#{time.employee.firstName}
+															#{time.employee.lastName}</a> <span class="sl-date">5
+															minutes ago</span>
+														<h:panelGroup
+															rendered="#{employeeProfileBean.employeeProfile.id == time.employee.id}">
+
+															<h:commandButton
+																action="#{employeeProfileBean.deleteTimeLine(time.id)}"
+																class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"
+																value="delete">
+																<i class="ti-eraser"></i>
+															</h:commandButton>
+															<h:commandButton
+																action="#{employeeProfileBean.postInLinked(time.content)}"
+																class="btn btn-info btn-flat btn-addon btn-xs m-b-10"
+																value="Linked">
+																<i class="ti-linkedin"></i>
+															</h:commandButton>
+
+														</h:panelGroup>
+														<blockquote class="m-t-10">#{time.content}</blockquote>
+													</div>
+												</div>
+												<br />
+
+											</div>
+										</h:form>
+										<hr />
+									</ui:repeat>
+								</div>
+							</div>
+						</div>
+						<!--second tab-->
+						<div class="tab-pane" id="profile" role="tabpanel">
+							<div class="card-body">
+								<br /> <br />
+								<div class="row">
+									<div class="col-md-3 col-xs-6 b-r">
+										<strong>Full Name</strong> <br />
+										<p class="text-muted">#{employeeProfileBean.employeeProfile.firstName}
+											#{employeeProfileBean.employeeProfile.lastName}</p>
+									</div>
+									<div class="col-md-3 col-xs-6 b-r">
+										<strong>Mobile</strong> <br />
+										<p class="text-muted">#{employeeProfileBean.employeeProfile.phoneNumber}</p>
+									</div>
+									<div class="col-md-3 col-xs-6 b-r">
+										<strong>Email</strong> <br />
+										<p class="text-muted">#{employeeProfileBean.employeeProfile.email}</p>
+									</div>
+									<div class="col-md-3 col-xs-6">
+										<strong>Location</strong> <br />
+										<p class="text-muted">#{employeeProfileBean.employeeProfile.address}</p>
+									</div>
+								</div>
+								<br /> <br />
+								<div class="row">
+									<div class="col-md-3 col-xs-6 b-r">
+										<strong>Departement</strong> <br />
+										<p class="text-muted">#{employeeProfileBean.employeeProfile.post.departement}</p>
+									</div>
+									<div class="col-md-3 col-xs-6 b-r">
+										<strong>Nationality</strong> <br />
+										<p class="text-muted">#{employeeProfileBean.employeeProfile.nationality}</p>
+									</div>
+									<div class="col-md-3 col-xs-6 b-r">
+										<strong>Worked Hours</strong> <br />
+										<p class="text-muted">#{employeeProfileBean.employeeProfile.workedHours}</p>
+									</div>
+									<div class="col-md-3 col-xs-6">
+										<strong>Vacation Days</strong> <br />
+										<p class="text-muted">#{employeeProfileBean.employeeProfile.vacationDays}</p>
+									</div>
+								</div>
+								<hr></hr>
+								<p class="m-t-30">PROJECT AND TASK INFORMATIONS</p>
+
+								<div class="row">
+									<div class="col-md-3" style="background-color: cyan">
+										<div class="card p-30">
+											<div class="media">
+												<div class="media-left meida media-middle">
+													<span><i class="fa fa-usd f-s-40 color-primary"></i></span>
+												</div>
+												<div class="media-body media-text-right">
+													<h2>#{employeeProfileBean.employeeProfile.contract.hourPrice}</h2>
+													<p class="m-b-0">Wage per Hour</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3" style="background-color: pink">
+										<div class="card p-30">
+											<div class="media">
+												<div class="media-left meida media-middle">
+													<span><i
+														class="fa fa-shopping-cart f-s-40 color-success"></i></span>
+												</div>
+												<div class="media-body media-text-right">
+													<h2>#{employeeProfileBean.employeeProfile.appreciationMonth}</h2>
+													<p class="m-b-0">Appreciation per Month</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3" style="background-color: #B0CC99">
+										<div class="card p-30">
+											<div class="media">
+												<div class="media-left meida media-middle">
+													<span><i class="fa fa-archive f-s-40 color-warning"></i></span>
+												</div>
+												<div class="media-body media-text-right">
+													<h2>#{employeeProfileBean.employeeProfile.appreciationYear}</h2>
+													<p class="m-b-0">Appreciation per Year</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3" style="background-color: #FF5B2B">
+										<div class="card p-30">
+											<div class="media">
+												<div class="media-left meida media-middle">
+													<span><i class="fa fa-user f-s-40 color-danger"></i></span>
+												</div>
+												<div class="media-body media-text-right">
+													<h2>#{employeeProfileBean.employeeProfile.contract.requiredHoursNb}</h2>
+													<p class="m-b-0">Required Hours per day</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<hr></hr>
+
+								<h4 class="font-medium m-t-30">Skill Set</h4>
+								<hr></hr>
+								<ui:repeat var="skill" value="#{employeeProfileBean.skillsEmp}">
+									<h5 class="m-t-30">
+										<h:outputLabel value="#{skill.skill.name}" />
+										<span class="pull-right"></span>
+									</h5>
+									<div class="progress">
+										<h:panelGroup
+											rendered="#{employeeProfileBean.skillColor(skill.skillNote)==2 }">
+											<div class="progress-bar bg-success" role="progressbar"
+												aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+												style="width: #{skill.skillNote*10}%; height: 6px;">
+												<span class="sr-only">50% Complete</span>
+											</div>
+										</h:panelGroup>
+
+										<h:panelGroup
+											rendered="#{employeeProfileBean.skillColor(skill.skillNote)==1 }">
+											<div class="progress-bar bg-danger" role="progressbar"
+												aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+												style="width: #{skill.skillNote*10}%; height: 6px;">
+												<span class="sr-only">50% Complete</span>
+											</div>
+										</h:panelGroup>
+									</div>
+								</ui:repeat>
+							</div>
+						</div>
+						<div class="tab-pane" id="settings" role="tabpanel">
+							<div align="center">
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="card-body">
+											<div class="card">
+												<div class="card-title">
+													<h2 style="color: pink">GENERAL INFOS</h2>
+												</div>
+												<h:form class="form-horizontal form-material">
+													<div class="form-group">
+														<label class="col-md-4">First Name</label>
+														<div class="col-md-4">
+															<h:inputText
+																value="#{employeeProfileBean.employeeProfile.firstName}"
+																class="form-control form-control-line" a:required="" />
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-md-4">Last Name</label>
+														<div class="col-md-4">
+															<h:inputText
+																value="#{employeeProfileBean.employeeProfile.lastName}"
+																class="form-control form-control-line" a:required="" />
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="example-email" class="col-md-6">Email</label>
+														<div class="col-md-6">
+															<h:inputText
+																value="#{employeeProfileBean.employeeProfile.email}"
+																class="form-control form-control-line"
+																name="example-email" id="example-email" a:required="" />
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-6">Select Gender</label>
+														<div class="col-sm-6">
+															<h:selectOneMenu
+																styleClass="form-control form-control-line"
+																value="#{employeeProfileBean.employeeProfile.gender}">
+																<f:selectItem itemLabel="Male" itemValue="Male" />
+																<f:selectItem itemLabel="Female" itemValue="Female" />
+															</h:selectOneMenu>
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-md-6">Phone No</label>
+														<div class="col-md-6">
+															<h:inputText
+																value="#{employeeProfileBean.employeeProfile.phoneNumber}"
+																class="form-control form-control-line" a:required="" />
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-md-6">Nationality</label>
+														<div class="col-md-6">
+															<h:inputText
+																value="#{employeeProfileBean.employeeProfile.nationality}"
+																class="form-control form-control-line" a:required="" />
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-6">Select Country</label>
+														<div class="col-sm-6">
+															<select class="form-control form-control-line">
+																<option>Tunis</option>
+																<option>India</option>
+																<option>Usa</option>
+																<option>Canada</option>
+																<option>France</option>
+																<option>Belgique</option>
+																<option>Marroc</option>
+																<option>Japan</option>
+																<option>Chine</option>
+															</select>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-sm-6">
+															<h:commandButton
+																action="#{employeeProfileBean.updateEmployeeGneraleInfos()}"
+																value="Update Profile" styleClass="btn btn-success" />
+														</div>
+													</div>
+												</h:form>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="tab-pane" id="Projects" role="tabpanel">
+							<h:form>
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="card-body">
+											<div class="card">
+												<div class="card-title">
+													<h2 style="color: #107597; font-weight: 800;">MY
+														PROJECTS</h2>
+													<br /> <br />
+													<div class="table-responsive">
+														<table class="table table-hover ">
+															<thead>
+																<tr>
+																	<th>#</th>
+																	<th>Entitled</th>
+																	<th>Master</th>
+																	<th>Start Date</th>
+																	<th>End Date</th>
+																	<th>Client Appreciation</th>
+																	<th>My TASKS</th>
+																</tr>
+															</thead>
+															<tbody>
+																<ui:repeat var="project"
+																	value="#{employeeProfileBean.projectsEmp}">
+																	<tr>
+																		<th scope="row">1</th>
+																		<td
+																			style="color: #277554; font-weight: 700; font-style: italic;">#{project.name}</td>
+																		<td style="color: #AA3C39; font-weight: 700">#{project.projectMaster}</td>
+																		<td class="color-primary"><h:outputLabel
+																				styleClass="font-weight-bold"
+																				value="#{project.startDate}">
+																				<f:convertDateTime pattern="dd-MM-yyyy" />
+																			</h:outputLabel></td>
+																		<td class="color-danger font-weight-bold"><h:outputLabel
+																				styleClass="font-weight-bold"
+																				value="#{project.endDate}">
+																				<f:convertDateTime pattern="dd-MM-yyyy" />
+																			</h:outputLabel></td>
+																		<td><span class="pie"
+																			data-peity='{ "fill": ["#13dafe", "#f2f2f2"]}'>#{project.clientAppreciation}/10</span>
+																		</td>
+																		<td><h:form>
+																				<h:commandButton value="Show Tasks"
+																					action="#{taskBean.tasksProject()}"
+																					class="btn btn-info btn-rounded m-b-10 m-l-5">
+																					<f:setPropertyActionListener
+																						target="#{taskBean.ajaxVar}" value="#{project.id}" />
+																					<f:ajax render="outputMessage" />
+																				</h:commandButton>
+																			</h:form></td>
+																	</tr>
+																</ui:repeat>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</h:form>
+
+							<div>
+								<h:form id="outputMessage">
+									<h:panelGroup rendered="#{taskBean.ajaxVar != null }">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="card-body">
+													<div class="card">
+														<div class="card-title">
+															<h2 style="color: #107597; font-weight: 800;">MY
+																TASKS IN : "#{taskBean.projectSelected.name}"</h2>
+															<br /> <br />
+															<div class="table-responsive">
+																<table class="table table-bordered ">
+																	<thead>
+																		<tr>
+																			<th>#</th>
+																			<th>Task Name</th>
+																			<th>Importance</th>
+																			<th>Start Date</th>
+																			<th>End Date</th>
+																			<th>Progress</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<ui:repeat var="task"
+																			value="#{taskBean.tasklistFinal}">
+																			<tr>
+																				<th scope="row">1</th>
+																				<td
+																					style="color: #277554; font-weight: 700; font-style: italic;">#{task.taskPk.name}</td>
+																				<td><h:panelGroup
+																						rendered="#{employeeProfileBean.taskImportance(task.importance)==1 }">
+																						<span class="badge badge-success">Low
+																							Importance</span>
+																					</h:panelGroup> <h:panelGroup
+																						rendered="#{employeeProfileBean.taskImportance(task.importance)==2 }">
+																						<span class="badge badge-warning">Medium
+																							Importance</span>
+																					</h:panelGroup> <h:panelGroup
+																						rendered="#{employeeProfileBean.taskImportance(task.importance)==3 }">
+																						<span class="badge badge-danger">Height
+																							Importance</span>
+																					</h:panelGroup></td>
+
+																				<td class="color-primary"><h:outputLabel
+																						styleClass="font-weight-bold"
+																						value="#{task.startDate}">
+																						<f:convertDateTime pattern="dd-MM-yyyy" />
+																					</h:outputLabel></td>
+																				<td class="color-danger font-weight-bold"><h:outputLabel
+																						styleClass="font-weight-bold"
+																						value="#{task.endDate}">
+																						<f:convertDateTime pattern="dd-MM-yyyy" />
+																					</h:outputLabel></td>
+																				<td><span class="pull-right">#{task.taskNote.intValue()}%</span>
+
+																					<h:panelGroup
+																						rendered="#{employeeProfileBean.taskProgress(task.taskNote)==1 }">
+																						<div class="progress ">
+																							<div role="progressbar"
+																								style="width: #{task.taskNote.intValue()}%; height: 8px;"
+																								class="progress-bar bg-danger wow animated progress-animated">
+																								<span class="sr-only">60% Complete</span>
+																							</div>
+																						</div>
+																					</h:panelGroup> <h:panelGroup
+																						rendered="#{employeeProfileBean.taskProgress(task.taskNote)==2 }">
+																						<div class="progress ">
+																							<div role="progressbar"
+																								style="width: #{task.taskNote.intValue()}%; height: 8px;"
+																								class="progress-bar bg-warning wow animated progress-animated">
+																								<span class="sr-only">60% Complete</span>
+																							</div>
+																						</div>
+																					</h:panelGroup> <h:panelGroup
+																						rendered="#{employeeProfileBean.taskProgress(task.taskNote)==3 }">
+																						<div class="progress ">
+																							<div role="progressbar"
+																								style="width: #{task.taskNote.intValue()}%; height: 8px;"
+																								class="progress-bar bg-success wow animated progress-animated">
+																								<span class="sr-only">60% Complete</span>
+																							</div>
+																						</div>
+																					</h:panelGroup></td>
+																			</tr>
+																		</ui:repeat>
+																	</tbody>
+																</table>
+															</div>
+															<br /> <br />
+
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</h:panelGroup>
+								</h:form>
+							</div>
+
+							<div align="center">
+								<h:form>
+									<h:commandButton action="#{taskBean.redirectDetailsTask()}"
+										value="Manage Tasks Details"
+										class="btn btn-warning btn-rounded m-b-10 m-l-5"
+										style="width: 600px"></h:commandButton>
+								</h:form>
+							</div>
+
+						</div>
+
+
+
+					</div>
+				</div>
+			</div>
+			<!-- Column -->
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</ui:define>
+</ui:composition>

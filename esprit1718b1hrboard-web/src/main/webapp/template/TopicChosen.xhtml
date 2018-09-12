@@ -1,0 +1,53 @@
+
+
+
+
+
+
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	template="/template/templateEmployee.xhtml">
+
+	<ui:define name="pageContent">
+
+
+		<ui:repeat var="topics" value="#{forumBean.topics}">
+			<div class="">
+				<div class="mt-4">
+					<div class="">
+						<ul class="message-list">
+							<h:form>
+								<li class="unread"><a href="email-read.html">
+										<div class="col-mail col-mail-1">
+
+											<p class="title"></p>
+											<span ><h:commandButton action="#{pageBean.gototopic()}" value="" styleClass="btn btn-primary active" >
+											<f:setPropertyActionListener
+												target="#{pageBean.id_topic}"
+												value="#{topics.id}" />
+											</h:commandButton></span>
+										</div>
+
+										<div class="col-mail col-mail-2">
+											
+											<div class="subject"></div>
+											<SPAN>#{topics.title}</SPAN>
+										</div>
+
+								</a></li>
+								<div style="display: none">
+								
+								</div>
+
+							</h:form>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</ui:repeat>
+	</ui:define>
+</ui:composition>

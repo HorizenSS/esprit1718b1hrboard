@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="950.0" style="-fx-background-color: #e6e6e6;" stylesheets="@custom.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.EntrepriseMenuController">
+   <children>
+      <VBox prefHeight="64.0" prefWidth="950.0">
+         <children>
+            <HBox prefHeight="62.0" prefWidth="950.0">
+               <children>
+                  <JFXButton fx:id="HierarchiesButton" onMouseClicked="#OnHierarchiesClicked" prefHeight="62.0" prefWidth="457.0" stylesheets="@style.css" text="Hierarchies" />
+                  <Separator orientation="VERTICAL" prefHeight="62.0" prefWidth="0.0" />
+                  <JFXButton fx:id="PostsButton" onMouseClicked="#OnPostsClicked" prefHeight="86.0" prefWidth="475.0" text="Posts" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+      <StackPane fx:id="MenusPane" layoutX="3.0" layoutY="64.0" prefHeight="547.0" prefWidth="950.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.SuperAdminFXMLController">
+   <children>
+      <VBox prefHeight="538.0" prefWidth="807.0">
+         <children>
+            <Pane prefHeight="89.0" prefWidth="850.0" style="-fx-background-color: rgb(0, 170, 207);" />
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="377.0" prefWidth="850.0" />
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="792.0" prefWidth="1112.0">
+         <children>
+            <Label layoutX="333.0" layoutY="56.0" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Light" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="178.0" layoutY="70.0" opacity="0.9" prefHeight="27.0" prefWidth="725.0" />
+            <AnchorPane layoutX="23.0" layoutY="88.0" prefHeight="710.0" prefWidth="1077.0">
+               <children>
+                  <AnchorPane layoutX="-14.0" prefHeight="704.0" prefWidth="1100.0" styleClass="container-card">
+                     <children>
+                        <VBox layoutX="7.0" prefHeight="705.0" prefWidth="180.0">
+                           <children>
+                              <JFXButton fx:id="AccoutAddGUI" onAction="#GoToAccoutAdd" prefHeight="335.0" prefWidth="180.0" styleClass="rev-nav-button" text="ACCOUNTS TO ADD" />
+                              <Separator prefHeight="10.0" prefWidth="182.0" />
+                              <JFXButton fx:id="AccoutDeletGui" onAction="#GoToAccoutDelete" prefHeight="307.0" prefWidth="190.0" styleClass="rev-nav-button" text="ACCOUNT TO DELETE" />
+                           </children>
+                        </VBox>
+                        <AnchorPane fx:id="ChangePane" layoutX="181.0" prefHeight="705.0" prefWidth="931.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <Label layoutX="334.0" layoutY="32.0" prefHeight="51.0" prefWidth="794.0" text="Add&amp;Remove  Acoounts" textFill="WHITE" fx:id="xx">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

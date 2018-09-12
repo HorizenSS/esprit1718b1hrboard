@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b1.esprit1718b1hrboard.app.client.controllers.EmployeeHomeSpaceController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="950.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bg.png" />
+         </image>
+      </ImageView>
+      <AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="950.0">
+         <children>
+            <AnchorPane fx:id="ProjectsBtn" layoutX="747.0" layoutY="100.0" onMouseClicked="#OnActionProjects" prefHeight="160.0" prefWidth="130.0" styleClass="menus" stylesheets="@style.css">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/training.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" layoutX="3.0" layoutY="101.0" prefHeight="50.0" prefWidth="122.0">
+                     <children>
+                        <Text fill="#795743" strokeType="OUTSIDE" strokeWidth="0.0" text="Projects" textAlignment="CENTER" wrappingWidth="89.13671875">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="TodayDelayBtn" layoutX="539.0" layoutY="267.0" onMouseClicked="#OnActionTodayDelay" prefHeight="160.0" prefWidth="130.0" styleClass="menus" stylesheets="@style.css" visible="false">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/student.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" layoutX="3.0" layoutY="101.0" prefHeight="50.0" prefWidth="122.0">
+                     <children>
+                        <Text fill="#795743" strokeType="OUTSIDE" strokeWidth="0.0" text="Today Delays" textAlignment="CENTER" wrappingWidth="89.13671875">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="TodayAbsBtn" layoutX="317.0" layoutY="181.0" onMouseClicked="#OnActionTodayAbs" prefHeight="160.0" prefWidth="130.0" styleClass="menus" stylesheets="@style.css" visible="false">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/student_entry.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" layoutX="3.0" layoutY="101.0" prefHeight="50.0" prefWidth="122.0">
+                     <children>
+                        <Text fill="#795743" strokeType="OUTSIDE" strokeWidth="0.0" text="Today Absences" textAlignment="CENTER" wrappingWidth="89.13671875">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <VBox alignment="CENTER" layoutX="13.0" layoutY="111.0" prefHeight="50.0" prefWidth="122.0" />
+            <AnchorPane fx:id="EmployeeMgBtn" layoutX="107.0" layoutY="96.0" onMouseClicked="#OnActionEmployeeMg" prefHeight="160.0" prefWidth="130.0" styleClass="menus" stylesheets="@style.css">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/settings.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" layoutX="3.0" layoutY="101.0" prefHeight="50.0" prefWidth="122.0">
+                     <children>
+                        <Text fill="#795743" strokeType="OUTSIDE" strokeWidth="0.0" text="Employees MG" textAlignment="CENTER" wrappingWidth="89.13671875">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <JFXProgressBar fx:id="waitBar" layoutX="104.0" layoutY="264.0" prefHeight="2.0" prefWidth="130.0" style="-fx-background-color: BLUE;" />
+            <JFXProgressBar fx:id="waitBar1" layoutX="319.0" layoutY="347.0" prefHeight="2.0" prefWidth="130.0" style="-fx-background-color: BLUE;" visible="false" />
+            <JFXProgressBar fx:id="waitBar11" layoutX="539.0" layoutY="435.0" prefHeight="2.0" prefWidth="130.0" style="-fx-background-color: BLUE;" visible="false" />
+            <JFXProgressBar fx:id="waitBar111" layoutX="749.0" layoutY="267.0" prefHeight="2.0" prefWidth="130.0" style="-fx-background-color: BLUE;" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

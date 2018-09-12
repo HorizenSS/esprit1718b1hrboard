@@ -1,0 +1,334 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	template="/template/templateEmployee.xhtml">
+
+	<ui:define name="pageContent">
+
+		<div class="container-fluid">
+			<!-- Start Page Content -->
+			<div class="row">
+				<div class="col-md-3">
+					<div class="card p-30">
+						<div class="media">
+							<div class="media-left meida media-middle">
+								<span><i class="fa fa-usd f-s-40 color-primary"></i></span>
+							</div>
+							<div class="media-body media-text-right">
+								<h2>568120</h2>
+								<p class="m-b-0">Total Revenue</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card p-30">
+						<div class="media">
+							<div class="media-left meida media-middle">
+								<span><i class="fa fa-shopping-cart f-s-40 color-success"></i></span>
+							</div>
+							<div class="media-body media-text-right">
+								<h2>1178</h2>
+								<p class="m-b-0">Sales</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card p-30">
+						<div class="media">
+							<div class="media-left meida media-middle">
+								<span><i class="fa fa-archive f-s-40 color-warning"></i></span>
+							</div>
+							<div class="media-body media-text-right">
+								<h2>25</h2>
+								<p class="m-b-0">Stores</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card p-30">
+						<div class="media">
+							<div class="media-left meida media-middle">
+								<span><i class="fa fa-user f-s-40 color-danger"></i></span>
+							</div>
+							<div class="media-body media-text-right">
+								<h2>847</h2>
+								<p class="m-b-0">Customer</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="card">
+						<div class="card-title">
+							<h4 class="text-primary">Recent Orders</h4>
+
+							<h:outputLabel value="" />
+						</div>
+						<div class="card-body ">
+							<div class="table-responsive">
+								<table class="table ">
+									<thead>
+										<tr>
+											<th>Trainig Name</th>
+											<th>Trainig Type</th>
+											<th>Place</th>
+											<th>Subject</th>
+											<th>Trainig Start Date</th>
+											<th>Trainig End Date</th>
+											<th>Trainer</th>
+											<th>Option</th>
+										</tr>
+									</thead>
+									<tbody>
+
+										<ui:repeat var="training" value="#{trainingBean.listTraining}">
+											<tr>
+												<td><h:outputLabel value="#{training.trainingName}" />
+												</td>
+												<h:panelGroup
+													rendered="#{trainingBean.getTypeTraining(training) eq 1}">
+													<td><span class="badge badge-success"><h:outputLabel
+																value="#{training.trainingtype}" /></span></td>
+												</h:panelGroup>
+
+												<h:panelGroup
+													rendered="#{trainingBean.getTypeTraining(training) eq 0}">
+													<td><span class="badge badge-warning"><h:outputLabel
+																value="#{training.trainingtype}" /></span></td>
+												</h:panelGroup>
+
+												<td><span><h:outputLabel
+															value="#{training.place}" /></span></td>
+												<td><span><h:outputLabel
+															value="#{training.subject}" /></span></td>
+												<td><span><h:outputLabel
+															value="#{training.tarainingDateStart}">
+															<f:convertDateTime pattern="dd-MM-yyyy" />
+														</h:outputLabel></span></td>
+												<td><span><h:outputLabel
+															value="#{training.tarainingDateEnd}">
+															<f:convertDateTime pattern="dd-MM-yyyy" />
+														</h:outputLabel></span></td>
+
+												<td><h:outputLabel
+														value="#{training.trainer.toString()}" /></td>
+
+												<h:panelGroup
+													rendered="#{trainingBean.logEmployee eq training.trainer.toString()}">
+													<td><h:form>
+															<h:commandButton class="btn btn-primary active"
+																onclick="toggle()" action="#{trainingBean.azerty()}"
+																value="Display Employees">
+																<f:setPropertyActionListener
+																	target="#{trainingBean.trainingId}"
+																	value="#{training.id}" />
+															</h:commandButton>
+														</h:form></td>
+
+												</h:panelGroup>
+												<h:panelGroup
+													rendered="#{trainingBean.logEmployee ne training.trainer.toString()}">
+													<td><h:commandButton
+															action="#{trainingBean.trainingId}"
+															class="btn btn-primary disabled"
+															value="Display Employees">
+														</h:commandButton></td>
+												</h:panelGroup>
+											</tr>
+										</ui:repeat>
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+
+			<!-- ************************************************************************************* -->
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+					<div class="card">
+					<div class="card-title">
+							<h4 class="text-primary">Give Note To Employee</h4>
+
+							<h:outputLabel value="" />
+						</div>
+						<div class="card-body">
+							<div class="form-validation">
+								<form class="form-valide" action="" method="post">
+								<h:form>
+									<div class="form-group row">
+										<label class="col-lg-4 col-form-label" for="val-skill">Employe
+											Has Training <span class="text-danger">*</span>
+										</label>
+										
+										<div class="col-lg-6">
+											
+												<h:selectOneMenu value="#{trainingBean.employeSelectedId}"
+													class="btn btn-primary ">
+													<f:selectItems value="#{trainingBean.listEmployee}"
+														var="employe" itemValue="#{employe.id}"
+														itemLabel="#{employe.firstName} #{employe.lastName}" />
+												</h:selectOneMenu>
+												
+											
+										</div>
+										<div class="col-lg-10">
+											
+												<h:commandButton class="btn btn-primary active" action="#{trainingBean.modifier()}" value="modifier"></h:commandButton>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-lg-4 col-form-label" for="val-username">Attempt
+											<span class="text-danger">*</span>
+										</label>
+										<div class="col-lg-6">
+											<h:inputText value="#{trainingBean.attempt}" class="form-control" a:placeholder="Attempt"/>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-lg-4 col-form-label" for="val-email">Note Employee
+											<span class="text-danger">*</span>
+										</label>
+										<div class="col-lg-6">
+											<h:inputText value="#{trainingBean.employeeNote}" class="form-control" a:placeholder="Note Employee"/>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-lg-4 col-form-label" for="val-password">Note Trainer
+											<span class="text-danger">*</span>
+										</label>
+										<div class="col-lg-6">
+											<h:inputText value="#{trainingBean.noteTrainer}" class="form-control" a:placeholder="Note Trainer"/>
+										</div>
+									</div>
+									<div class="form-group row">
+										<div class="col-lg-8 ml-auto">
+											<h:commandButton class="btn btn-primary" action="#{trainingBean.mettreAjourEmploye()}" value="Give Note to Employee" />
+										</div>
+									</div>
+								</h:form>
+									
+								</form>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555 -->
+			
+
+			<!-- ************************************************************************************* -->
+
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="row">
+						<div class="col-lg-6">
+
+							<!-- /# card -->
+						</div>
+						<!-- /# column -->
+
+						<!--          ########################          -->
+						<div class="col-lg-12">
+							<div class="card">
+								<div class="card-body browser">
+									<p class="f-w-600">
+										iMacs <span class="pull-right">85%</span>
+									</p>
+									<div class="progress ">
+										<div role="progressbar" style="width: 85%; height: 8px;"
+											class="progress-bar bg-danger wow animated progress-animated">
+											<span class="sr-only">60% Complete</span>
+										</div>
+									</div>
+
+									<p class="m-t-30 f-w-600">
+										iBooks<span class="pull-right">90%</span>
+									</p>
+									<div class="progress">
+										<div role="progressbar" style="width: 90%; height: 8px;"
+											class="progress-bar bg-info wow animated progress-animated">
+											<span class="sr-only">60% Complete</span>
+										</div>
+									</div>
+
+									<p class="m-t-30 f-w-600">
+										iPhone<span class="pull-right">65%</span>
+									</p>
+									<div class="progress">
+										<div role="progressbar" style="width: 65%; height: 8px;"
+											class="progress-bar bg-success wow animated progress-animated">
+											<span class="sr-only">60% Complete</span>
+										</div>
+									</div>
+
+									<p class="m-t-30 f-w-600">
+										Samsung<span class="pull-right">65%</span>
+									</p>
+									<div class="progress">
+										<div role="progressbar" style="width: 65%; height: 8px;"
+											class="progress-bar bg-warning wow animated progress-animated">
+											<span class="sr-only">60% Complete</span>
+										</div>
+									</div>
+
+									<p class="m-t-30 f-w-600">
+										android<span class="pull-right">65%</span>
+									</p>
+									<div class="progress m-b-30">
+										<div role="progressbar" style="width: 65%; height: 8px;"
+											class="progress-bar bg-success wow animated progress-animated">
+											<span class="sr-only">60% Complete</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--          ########################          -->
+
+
+
+					</div>
+				</div>
+
+
+
+
+			</div>
+
+
+			<!-- End PAge Content -->
+		</div>
+
+
+		<script type="text/javascript">
+      function toggle() {
+        var element = document.getElementById("ttt");
+        if(element.style.display == 'block') {
+          element.style.display = 'none';
+        } else {
+          element.style.display = 'block'
+        }
+      }
+    </script>
+	</ui:define>
+</ui:composition>
