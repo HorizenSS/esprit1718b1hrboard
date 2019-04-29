@@ -1,5 +1,5 @@
-# esprit1718b1hrboard
-Projet fin d'année esprit 2017/2018 : Human resources dashborad management
+# esprit1718b1hrboar
+Human resources dashborad management
 
 
 Link to desktop application demonstration video :
